@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
-import Layout from './components/shared/Layout'
-import Dashboard from './components/Dashboard'
+import Layout from './components/shared/layout'
+import Dashboard from './components/dashboard'
 import Products from './components/Products'
 
 
