@@ -1,10 +1,17 @@
-//import { HiViewGrid, } from 'react-icons/hi'
+import { HiViewGrid, HiLibrary, HiCog, HiOfficeBuilding, HiShoppingCart, HiChatAlt2 } from 'react-icons/hi'
 
+export const DASHBOARD_SIDEBAR_LINKS = [
+    {
+    key: 'dashboard',
+        label : 'Dashboard',
+            path : '/',
+                icon : <HiViewGrid />,
+    },
 
-export default function Navigation(){
-    return(
-        <div>
-
-        </div>
-    )
-}
+{
+    key: 'businessDirectory',
+        label : 'Business Directory',
+            path : '/businessDirectory',
+                icon : <HiLibrary />,
+    }
+]
