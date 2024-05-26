@@ -12,15 +12,17 @@ const LinkClasses =
   "text-primary-100 hover:text-primary-100  p-20 w-full flex  flex-row justify-start  items-center gap-3  max-lg:justify-center hover:bg-primary-700 text-sm font-normal leading-tight max-lg:hidden lg:flex  ";
 
 export default function Sidebar() {
-    const [notificationsEnabled, setNotificationsEnabled] = useState(false);
-    const [notifications, setNotifications] = useState([]);
-  
-    const handleToggle = () => {
-      const newStatus = !notificationsEnabled;
-      setNotificationsEnabled(newStatus);
-      const message = newStatus ? "Notifications are now enabled!" : "Notifications are now disabled!";
-      setNotifications([{ id: notifications.length + 1, message }]);
-    };
+  const [notificationsEnabled, setNotificationsEnabled] = useState(false);
+  const [notifications, setNotifications] = useState([]);
+
+  const toggleNotification = () => {
+    const newStatus = !notificationsEnabled;
+    setNotificationsEnabled(newStatus);
+    const message = newStatus
+      ? "Notifications are now enabled!"
+      : "Notifications are now disabled!";
+    setNotifications([{ id: notifications.length + 1, message }]);
+  };
   return (
     <div className="flex flex-col justify-between h-full align-items-center">
       <div className="flex flex-col justify-start align-items-center">
@@ -48,19 +50,24 @@ export default function Sidebar() {
       </div>
 
       <div className="flex flex-col justify-end">
+        <ToggleSwitch
+          label="Toggle Notifications"
+          checked={notificationsEnabled}
+          onChange={toggleNotification}
+        />
+
+        <Notification notifications={notifications} />
+
         {DASHBOARD_SIDEBAR_BOTTOM_LINKS.map((item) => (
           <SidebarLink key={item.key} item={item} />
         ))}
 
-<ToggleSwitch 
-          label="Toggle Notifications" 
-          checked={notificationsEnabled} 
-          onChange={handleToggle} 
-        />
-        <Notification notifications={notifications} />
       </div>
+
     </div>
+
   );
+  
 }
 
 function SidebarLink({ item }) {

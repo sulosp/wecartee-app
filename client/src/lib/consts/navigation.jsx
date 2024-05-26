@@ -1,5 +1,5 @@
 import { HiViewGrid, HiLibrary, HiCog, HiOfficeBuilding, 
-    HiShoppingCart, HiChatAlt2 } from 'react-icons/hi'
+    HiShoppingCart, HiChatAlt2, HiLogout } from 'react-icons/hi'
 
 export const DASHBOARD_SIDEBAR_LINKS = [
     {
@@ -54,6 +54,13 @@ export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
         label : 'Settings',
         path :'/settings',
         icon : <HiCog />,
+    },
+
+    {
+        key:'logout',
+        label:'Logout',
+        path:'/',
+        icon:<HiLogout/>,
     }
     
 ]
