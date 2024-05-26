@@ -1,9 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Logolight from '../../assets/logolight.svg'
 import Favicon from '../../assets/favicon.svg'
-import {DASHBOARD_SIDEBAR_LINKS} from '../lib/consts/navigation'
+import {DASHBOARD_SIDEBAR_BOTTOM_LINKS, DASHBOARD_SIDEBAR_LINKS} from '../lib/consts/navigation'
 
+
+const LinkClasses = 'text-primary-100  p-20 w-full flex  flex-row justify-start  items-center gap-3  max-lg:justify-center hover:bg-primary-700 '
 
 export default function Sidebar() {
     return (
@@ -21,6 +23,16 @@ export default function Sidebar() {
                 ) )}
 
             </div>
+                
+            <div className = "flex flex-col justify-end">
+
+                { DASHBOARD_SIDEBAR_BOTTOM_LINKS.map( (item) => {
+                    <SidebarLink key = {item.key} item = {item}/>
+                })
+
+                }
+            </div>
+           
 
         </div>
     )
@@ -29,14 +41,18 @@ export default function Sidebar() {
 
 
 function SidebarLink({item}){
+        //const {pathName } = useLocation()
+//classNames = pathName === item.path? 'text-white': '', 
     return(
-        <Link to={item.path}  className = "text-primary-100 hover:text-primary-900 p-20 w-full flex  flex-row justify-start  items-center gap-3  max-lg:justify-center ">
-            <span className = "text-primary-100">{item.icon}</span>
-            {item.label}
+
+        <Link to={item.path}  className = {LinkClasses}>
+
+            <span className = "text-primary-100 ">{item.icon}</span>
+            <span className="text-primary-100 text-sm font-normal leading-tight max-lg:hidden lg:flex ">{item.label}</span>
             
         </Link>
+
     )
 }
-
 
 
