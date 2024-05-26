@@ -1,8 +1,14 @@
-import React from 'react'
+// Dashboard.js
+import React from 'react';
 
-export default function Dashboard(){
-    return(
-        <div>Dashboard</div>
-    )
+
+function Dashboard() {
+
+  return (
+    <div>
+      <h1>Dashboard</h1>
+    </div>
+  );
 }
 
+export default Dashboard;
