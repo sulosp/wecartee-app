@@ -7,6 +7,7 @@ import classNames from "classnames";
 import { DASHBOARD_SIDEBAR_BOTTOM_LINKS } from "../../lib/consts/navigation";
 import ToggleSwitch from "../controls/toggleSwitch";
 import Notification from "./notification";
+import ViewMode from './viewMode'
 
 const LinkClasses =
   "text-primary-100 hover:text-primary-100  p-20 w-full flex  flex-row justify-start  items-center gap-3  max-lg:justify-center hover:bg-primary-700 text-sm font-normal leading-tight max-lg:hidden lg:flex  ";
@@ -62,12 +63,11 @@ export default function Sidebar() {
           <SidebarLink key={item.key} item={item} />
         ))}
 
+        
+        <ViewMode />
       </div>
-
     </div>
-
   );
-  
 }
 
 function SidebarLink({ item }) {
