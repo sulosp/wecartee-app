@@ -68,20 +68,18 @@ export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
   },
 ];
 
-
 export const VIEWMODE_LINKS = [
   {
-    key:'buyer',
-    label :'Buyer',
-    path :'/',
-    icon :<HiLogout />,
+    key: "buyer",
+    label: "Buyer",
+    path: "/",
+    icon: <HiLogout />,
   },
 
-{
-  key:'seller',
-  label:'Seller',
-  path:'/seller',
-  icon:<HiLogout />,
-}
-]
-
+  {
+    key: "seller",
+    label: "Seller",
+    path: "/seller",
+    icon: <HiLogout />,
+  },
+];
