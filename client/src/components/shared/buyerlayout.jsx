@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./sidebar";
 
-export default function Layout() {
+export default function BuyerLayout() {
   return (
     <div className="flex flex-row h-lvh ">
       <div className="bg-slate-900 h-screen w-1/6 overflow-hidden"><Sidebar /></div>
