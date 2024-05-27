@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/buyer" element={<BuyerLayout />}>
+        <Route path="/" element={<BuyerLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="businessDirectory" element={<BusinessDirectory />} />
           <Route path="cart" element={<Cart />} />
@@ -22,10 +22,9 @@ function App() {
           <Route path="savedBusinesses" element={<SavedBusinesses />} />
           <Route path="chat" element={<Chat />} />
         </Route>
-      </Routes>
+      
 
-
-      <Routes>
+   
         <Route path="/seller" element={<BuyerLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="businessDirectory" element={<BusinessDirectory />} />
@@ -35,6 +34,9 @@ function App() {
           <Route path="savedBusinesses" element={<SavedBusinesses />} />
           <Route path="chat" element={<Chat />} />
         </Route>
+
+
+        
       </Routes>
     </>
   );

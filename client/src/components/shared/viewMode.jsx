@@ -34,7 +34,6 @@ export function ProfileBtn({ item }) {
       <span className="text-primary-100">
         {isExpanded ? <HiChevronUp /> : <HiChevronDown />}
       </span>
-      
     </button>
   );
 }
