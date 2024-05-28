@@ -29,52 +29,50 @@ export function ProfileBtn({ item }) {
   const { pathname } = useLocation();
 
   return (
-    <div className="flex flex-col p-20 gap-5">
-      {isExpanded && (
-        <div
+    <div className="flex flex-col justify-end p-20 gap-5">
+      <div
+        className={classNames(
+          "inline-flex max-lg:hidden rounded-full p-[8px] bg-gradient-to-r from-blue-400 to-fuchsia-500 shadow-inner items-center  transition-opacity duration-1000",
+          {
+            "opacity-100 ": isExpanded,
+            "opacity-0": !isExpanded,
+          }
+        )}
+      >
+        <Link
+          to="/"
           className={classNames(
-            "transition-all duration-500 ease-in-out inline-flex max-lg:hidden  rounded-full p-[8px]  bg-gradient-to-r from-blue-400 to-fuchsia-500 shadow-inner items-center ",
-            {
-              " -translate-y-30 ": isExpanded,
-              "translate-y-30 ": !isExpanded,
-            }
+            pathname === "/businessDirectory" ||
+              pathname === "/cart" ||
+              pathname === "/socialZone" ||
+              pathname === "/savedBusinesses" ||
+              pathname === "/buyerchat" ||
+              pathname === "/"
+              ? "text-primary-900 bg-primary-100 "
+              : "text-primary-100 fill-primary-100",
+            LinkClasses
           )}
         >
-          <Link
-            to="/"
-            className={classNames(
-              pathname === "/businessDirectory" ||
-                pathname === "/cart" ||
-                pathname === "/socialZone" ||
-                pathname === "/savedBusinesses" ||
-                pathname === "/buyerchat" ||
-                pathname === "/"
-                ? "text-primary-900 bg-primary-100 "
-                : "text-primary-100 fill-primary-100",
-              LinkClasses
-            )}
-          >
-            <span>
-              <BuyerIcon />
-            </span>
-            <span>Buyer</span>
-          </Link>
-          <Link
-            to="/overview"
-            className={classNames(
-              pathname === "/overview" || pathname === "/sellerchat"
-                ? "text-primary-900 bg-primary-100"
-                : "text-primary-100 fill-primary-100",
-              LinkClasses
-            )}
-          >
-            <span>
-              <SellerIcon />
-            </span>
-            <span>Seller</span>
-          </Link>
-        </div>
-      )}
+          <span>
+            <BuyerIcon />
+          </span>
+          <span>Buyer</span>
+        </Link>
+        <Link
+          to="/overview"
+          className={classNames(
+            pathname === "/overview" || pathname === "/sellerchat"
+              ? "text-primary-900 bg-primary-100"
+              : "text-primary-100 fill-primary-100",
+            LinkClasses
+          )}
+        >
+          <span>
+            <SellerIcon />
+          </span>
+          <span>Seller</span>
+        </Link>
+      </div>
 
       <button
         className="inline-flex justify-between w-full items-center"
