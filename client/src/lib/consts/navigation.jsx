@@ -8,6 +8,8 @@ import {
   HiLogout,
 } from "react-icons/hi";
 
+
+
 export const DASHBOARD_SIDEBAR_LINKS = [
   {
     key: "dashboard",
@@ -63,23 +65,8 @@ export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
   {
     key: "logout",
     label: "Logout",
-    path: "/",
+    path: "#",
     icon: <HiLogout />,
   },
 ];
 
-export const VIEWMODE_LINKS = [
-  {
-    key: "buyer",
-    label: "Buyer",
-    path: "/",
-    icon: <HiLogout />,
-  },
-
-  {
-    key: "seller",
-    label: "Seller",
-    path: "/seller",
-    icon: <HiLogout />,
-  },
-];

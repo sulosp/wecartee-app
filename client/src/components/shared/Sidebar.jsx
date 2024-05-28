@@ -25,8 +25,11 @@ export default function Sidebar() {
     setNotifications([{ id: notifications.length + 1, message }]);
   };
   return (
+
     <div className="flex flex-col justify-between h-full align-items-center">
+
       <div className="flex flex-col justify-start align-items-center">
+        
         <Link
           className="flex flex-col items-center xl:px-50 lg:px-40 md:px-20 py-20"
           to="/"
@@ -63,8 +66,8 @@ export default function Sidebar() {
           <SidebarLink key={item.key} item={item} />
         ))}
 
-        
         <ViewMode />
+
       </div>
     </div>
   );

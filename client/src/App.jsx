@@ -22,6 +22,8 @@ function App() {
           <Route path="savedBusinesses" element={<SavedBusinesses />} />
           <Route path="chat" element={<Chat />} />
         </Route>
+
+        <Route index element="" />
       </Routes>
     </>
   );
