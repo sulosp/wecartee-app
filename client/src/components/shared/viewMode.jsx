@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { USER } from "../../lib/consts/userDetails";
-import { HiChevronDown, HiChevronUp } from "react-icons/hi";
+import { HiChevronUp } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
 import { ReactComponent as BuyerIcon } from "../../assets/buyerIcon.svg";
 import { ReactComponent as SellerIcon } from "../../assets/sellerIcon.svg";
@@ -31,7 +31,15 @@ export function ProfileBtn({ item }) {
   return (
     <div className="flex flex-col p-20 gap-5">
       {isExpanded && (
-        <div className="inline-flex max-lg:hidden  rounded-full p-[8px]  bg-gradient-to-r from-blue-400 to-fuchsia-500 shadow-inner items-center">
+        <div
+          className={classNames(
+            "transition-all duration-500 ease-in-out inline-flex max-lg:hidden  rounded-full p-[8px]  bg-gradient-to-r from-blue-400 to-fuchsia-500 shadow-inner items-center ",
+            {
+              " -translate-y-30 ": isExpanded,
+              "translate-y-30 ": !isExpanded,
+            }
+          )}
+        >
           <Link
             to="/"
             className={classNames(
@@ -39,7 +47,7 @@ export function ProfileBtn({ item }) {
                 pathname === "/cart" ||
                 pathname === "/socialZone" ||
                 pathname === "/savedBusinesses" ||
-                pathname === "/chat" ||
+                pathname === "/buyerchat" ||
                 pathname === "/"
                 ? "text-primary-900 bg-primary-100 "
                 : "text-primary-100 fill-primary-100",
@@ -54,7 +62,7 @@ export function ProfileBtn({ item }) {
           <Link
             to="/overview"
             className={classNames(
-              pathname === "/overview"
+              pathname === "/overview" || pathname === "/sellerchat"
                 ? "text-primary-900 bg-primary-100"
                 : "text-primary-100 fill-primary-100",
               LinkClasses
@@ -79,8 +87,12 @@ export function ProfileBtn({ item }) {
           </span>
         </div>
 
-        <span className="text-primary-100">
-          {isExpanded ? <HiChevronUp /> : <HiChevronDown />}
+        <span className="text-primary-100 ">
+          {isExpanded ? (
+            <HiChevronUp className="transform rotate-0 transition-transform ease-in-out duration-300" />
+          ) : (
+            <HiChevronUp className="transform rotate-180 transition-transform ease-in-out duration-300" />
+          )}
         </span>
       </button>
     </div>

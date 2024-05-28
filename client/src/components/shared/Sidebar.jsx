@@ -98,7 +98,7 @@ function ViewModeNavigation(){
   const location = useLocation();
   const path = location.pathname;
 
-if (path === "/businessDirectory" ||  path  === "/cart" || path === "/" || path === "/socialZone" || path === "/savedBusinesses" || path  === "/chat") {
+if (path === "/businessDirectory" ||  path  === "/cart" || path === "/" || path === "/socialZone" || path === "/savedBusinesses" || path  === "/buyerchat") {
   return (
     
     <div className="flex flex-col flex-shrink-0 items-center">
@@ -108,7 +108,7 @@ if (path === "/businessDirectory" ||  path  === "/cart" || path === "/" || path 
   </div>
   );
 
-} else if (path === "/overview"  ) {
+} else if (path === "/overview" || path === "/sellerchat"  ) {
   return (
     <div className="flex flex-col flex-shrink-0 items-center">
       {SELLER_SIDEBAR_LINKS.map((item) => (
