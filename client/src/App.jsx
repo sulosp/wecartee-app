@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import BuyerLayout from "./components/shared/buyerlayout";
+import Layout from "./components/shared/layout";
 import Dashboard from "./components/buyer/dashboard";
 import BusinessDirectory from "./components/buyer/businessDirectory";
 import Cart from "./components/buyer/cart";
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<BuyerLayout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="businessDirectory" element={<BusinessDirectory />} />
           <Route path="cart" element={<Cart />} />
@@ -22,21 +22,6 @@ function App() {
           <Route path="savedBusinesses" element={<SavedBusinesses />} />
           <Route path="chat" element={<Chat />} />
         </Route>
-      
-
-   
-        <Route path="/seller" element={<BuyerLayout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="businessDirectory" element={<BusinessDirectory />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="socialZone" element={<SocialZone />} />
-          <Route path="settings" element={<Settings />} />
-          <Route path="savedBusinesses" element={<SavedBusinesses />} />
-          <Route path="chat" element={<Chat />} />
-        </Route>
-
-
-        
       </Routes>
     </>
   );
