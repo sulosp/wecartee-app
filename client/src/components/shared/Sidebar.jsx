@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logolight from "../../assets/logolight.svg";
 import Favicon from "../../assets/favicon.svg";
-import { DASHBOARD_SIDEBAR_LINKS } from "../../lib/consts/navigation";
+import { DASHBOARD_SIDEBAR_LINKS, DASHBOARD_SIDEBAR_BOTTOM_LINKS, SELLER_SIDEBAR_LINKS } from "../../lib/consts/navigation";
 import classNames from "classnames";
-import { DASHBOARD_SIDEBAR_BOTTOM_LINKS } from "../../lib/consts/navigation";
 import ToggleSwitch from "../controls/toggleSwitch";
 import Notification from "./notification";
 import ViewMode from './viewMode'
+
 
 const LinkClasses =
   "text-primary-100 hover:text-primary-100  p-20 w-full flex  flex-row justify-start  items-center gap-3  max-lg:justify-center hover:bg-primary-700 text-sm font-normal leading-tight max-lg:hidden lg:flex  ";
@@ -24,6 +24,8 @@ export default function Sidebar() {
       : "Notifications are now disabled!";
     setNotifications([{ id: notifications.length + 1, message }]);
   };
+
+ 
   return (
 
     <div className="flex flex-col justify-between h-full align-items-center">
@@ -46,12 +48,11 @@ export default function Sidebar() {
           />
         </Link>
 
-        <div className="flex flex-col flex-shrink-0 items-center">
-          {DASHBOARD_SIDEBAR_LINKS.map((item) => (
-            <SidebarLink key={item.key} item={item} />
-          ))}
-        </div>
+      <ViewModeNavigation />
+
+
       </div>
+      
 
       <div className="flex flex-col justify-end">
         <ToggleSwitch
@@ -90,4 +91,34 @@ function SidebarLink({ item }) {
       <span>{item.label}</span>
     </Link>
   );
+}
+
+
+function ViewModeNavigation(){
+  const location = useLocation();
+  const path = location.pathname;
+
+if (path === "/businessDirectory" || path  === "cart" || path === "/" || path === "socialZone" || path === "savedBusinesses" || path  === "chat") {
+  return (
+    
+    <div className="flex flex-col flex-shrink-0 items-center">
+    {DASHBOARD_SIDEBAR_LINKS.map((item) => (
+      <SidebarLink key={item.key} item={item} />
+    ))}
+  </div>
+  );
+
+} else if (path.includes("overview")) {
+  return (
+    <div className="flex flex-col flex-shrink-0 items-center">
+      {SELLER_SIDEBAR_LINKS.map((item) => (
+        <SidebarLink key={item.key} item={item} />
+      ))}
+    </div>
+  );
+} else {
+  return null;
+}
+
+
 }

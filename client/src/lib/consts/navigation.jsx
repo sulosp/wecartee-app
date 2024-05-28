@@ -54,6 +54,43 @@ export const DASHBOARD_SIDEBAR_LINKS = [
   },
 ];
 
+export const SELLER_SIDEBAR_LINKS = [
+  {
+    key: "overview",
+    label: "Overview",
+    path: "/overview",
+    icon: <HiViewGrid />,
+  },
+
+  {
+    key: "orders",
+    label: "Orders",
+    path: "/orders",
+    icon: <HiLibrary />,
+  },
+
+  {
+    key: "products",
+    label: "Products",
+    path: "/products",
+    icon: <HiCog />,
+  },
+
+  {
+    key: "storebuilder",
+    label: "Store Builder",
+    path: "/storebuilder",
+    icon: <HiOfficeBuilding />,
+  },
+
+  {
+    key: "chat",
+    label: "Chat",
+    path: "/chat",
+    icon: <HiChatAlt2 />,
+  },
+];
+
 export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
   {
     key: "settings",

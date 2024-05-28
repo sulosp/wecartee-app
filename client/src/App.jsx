@@ -8,6 +8,8 @@ import SocialZone from "./components/buyer/socialZone";
 import Settings from "./components/shared/settings";
 import SavedBusinesses from "./components/buyer/savedBusinesses";
 import Chat from "./components/buyer/chat";
+import Overview from "./components/seller/overview";
+
 
 function App() {
   return (
@@ -21,9 +23,11 @@ function App() {
           <Route path="settings" element={<Settings />} />
           <Route path="savedBusinesses" element={<SavedBusinesses />} />
           <Route path="chat" element={<Chat />} />
+          <Route path="overview" element={<Overview />} />
         </Route>
 
-        <Route index element="" />
+       
+     
       </Routes>
     </>
   );
