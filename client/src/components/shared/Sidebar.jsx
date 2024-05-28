@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logolight from "../../assets/logolight.svg";
 import Favicon from "../../assets/favicon.svg";
-import { DASHBOARD_SIDEBAR_LINKS, DASHBOARD_SIDEBAR_BOTTOM_LINKS, SELLER_SIDEBAR_LINKS } from "../../lib/consts/navigation";
+import { DASHBOARD_SIDEBAR_LINKS, DASHBOARD_SIDEBAR_BOTTOM_LINKS, SELLER_SIDEBAR_LINKS, SETTINGS_LINKS } from "../../lib/consts/navigation";
 import classNames from "classnames";
 import ToggleSwitch from "../controls/toggleSwitch";
 import Notification from "./notification";
@@ -98,7 +98,7 @@ function ViewModeNavigation(){
   const location = useLocation();
   const path = location.pathname;
 
-if (path === "/businessDirectory" || path  === "cart" || path === "/" || path === "socialZone" || path === "savedBusinesses" || path  === "chat") {
+if (path === "/businessDirectory" ||  path  === "/cart" || path === "/" || path === "/socialZone" || path === "/savedBusinesses" || path  === "/chat") {
   return (
     
     <div className="flex flex-col flex-shrink-0 items-center">
@@ -108,7 +108,7 @@ if (path === "/businessDirectory" || path  === "cart" || path === "/" || path ==
   </div>
   );
 
-} else if (path.includes("overview")) {
+} else if (path === "/overview"  ) {
   return (
     <div className="flex flex-col flex-shrink-0 items-center">
       {SELLER_SIDEBAR_LINKS.map((item) => (
@@ -116,7 +116,21 @@ if (path === "/businessDirectory" || path  === "cart" || path === "/" || path ==
       ))}
     </div>
   );
-} else {
+} else if (path === "/settings"){
+  return(
+    <div className = "flex flex-col flex-shrink-0 items-center">
+        {SETTINGS_LINKS.map((item) => (
+          <SidebarLink key={item.key} item={item} />
+        ))
+
+        }
+    </div>
+  )
+}
+  
+  
+  
+  else {
   return null;
 }
 

@@ -5,10 +5,8 @@ import {
   HiOfficeBuilding,
   HiShoppingCart,
   HiChatAlt2,
-  HiLogout,
+  HiLogout, HiCollection, HiCube, HiChartBar
 } from "react-icons/hi";
-
-
 
 export const DASHBOARD_SIDEBAR_LINKS = [
   {
@@ -47,9 +45,9 @@ export const DASHBOARD_SIDEBAR_LINKS = [
   },
 
   {
-    key: "chat",
+    key: "buyerChat",
     label: "Chat",
-    path: "/chat",
+    path: "/buyerchat",
     icon: <HiChatAlt2 />,
   },
 ];
@@ -59,34 +57,34 @@ export const SELLER_SIDEBAR_LINKS = [
     key: "overview",
     label: "Overview",
     path: "/overview",
-    icon: <HiViewGrid />,
+    icon: <HiChartBar />,
   },
 
   {
     key: "orders",
     label: "Orders",
     path: "/orders",
-    icon: <HiLibrary />,
+    icon: <HiShoppingCart />,
   },
 
   {
     key: "products",
     label: "Products",
     path: "/products",
-    icon: <HiCog />,
+    icon: <HiCube />,
   },
 
   {
     key: "storebuilder",
     label: "Store Builder",
     path: "/storebuilder",
-    icon: <HiOfficeBuilding />,
+    icon: <HiCollection />,
   },
 
   {
-    key: "chat",
+    key: "sellerChat",
     label: "Chat",
-    path: "/chat",
+    path: "/sellerchat",
     icon: <HiChatAlt2 />,
   },
 ];
@@ -107,3 +105,15 @@ export const DASHBOARD_SIDEBAR_BOTTOM_LINKS = [
   },
 ];
 
+export const SETTINGS_LINKS = [
+
+  {
+    key: "profile",
+    label: "profile",
+    path: "/settings/profile",
+    icon: <HiLibrary />,
+  },
+
+
+
+];

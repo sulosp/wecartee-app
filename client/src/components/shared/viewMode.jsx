@@ -24,35 +24,50 @@ export function ProfileBtn({ item }) {
   };
 
   const LinkClasses =
-    "rounded-full p-[10px] text-white max-lg:p-0 w-1/2 inline-flex justify-center items-center gap-2 ";
+    "rounded-full p-[10px]  max-lg:p-0 w-1/2 inline-flex justify-center items-center gap-2 ";
 
   const { pathname } = useLocation();
 
   return (
     <div className="flex flex-col p-20 gap-5">
-      <div className="inline-flex max-lg:hidden  rounded-full p-[8px]  bg-gradient-to-r from-blue-400 to-fuchsia-500 shadow-inner items-center">
-        <Link to="/"
-          className={classNames(
-            pathname === "/businessDirectory" || pathname === "/cart" || pathname === "/socialZone" || pathname === "/savedBusinesses" || pathname === "/chat" || pathname === "/"
-              ? "text-primary-900 bg-primary-100"
-              : "text-primary-100",
-            LinkClasses
-          )}
-        >
-          <span>
-            <BuyerIcon />
-          </span>
-          <span>Buyer</span>
-        </Link>
-        <Link to="/overview" className={classNames(
-            pathname=== "/overview"  ? "text-primary-900 bg-primary-100"
-            : "text-primary-100" ,LinkClasses)}>
-          <span>
-            <SellerIcon />
-          </span>
-          <span>Seller</span>
-        </Link>
-      </div>
+      {isExpanded && (
+        <div className="inline-flex max-lg:hidden  rounded-full p-[8px]  bg-gradient-to-r from-blue-400 to-fuchsia-500 shadow-inner items-center">
+          <Link
+            to="/"
+            className={classNames(
+              pathname === "/businessDirectory" ||
+                pathname === "/cart" ||
+                pathname === "/socialZone" ||
+                pathname === "/savedBusinesses" ||
+                pathname === "/chat" ||
+                pathname === "/"
+                ? "text-primary-900 bg-primary-100 "
+                : "text-primary-100 fill-primary-100",
+              LinkClasses
+            )}
+          >
+            <span>
+              <BuyerIcon />
+            </span>
+            <span>Buyer</span>
+          </Link>
+          <Link
+            to="/overview"
+            className={classNames(
+              pathname === "/overview"
+                ? "text-primary-900 bg-primary-100"
+                : "text-primary-100 fill-primary-100",
+              LinkClasses
+            )}
+          >
+            <span>
+              <SellerIcon />
+            </span>
+            <span>Seller</span>
+          </Link>
+        </div>
+      )}
+
       <button
         className="inline-flex justify-between w-full items-center"
         onClick={handleClick}
