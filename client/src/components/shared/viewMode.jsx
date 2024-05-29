@@ -24,19 +24,21 @@ export function ProfileBtn({ item }) {
   };
 
   const LinkClasses =
-    "rounded-full p-[10px]  max-lg:p-0 w-1/2 inline-flex justify-center items-center gap-2 ";
+    "rounded-full p-[10px]  max-lg:p-0 w-1/2 max-lg:w-full  max-lg:min-h-8  inline-flex justify-center items-center gap-2 ";
 
   const { pathname } = useLocation();
 
   return (
-    <div className="flex flex-col justify-end p-20 gap-5">
+    <div
+      className={classNames(
+        "flex flex-col justify-end p-20 max-lg:p-8 gap-5 transition-all ease-in-out duration-300 max-lg:items-center  ",
+        isExpanded ? "max-h-[150px] max-lg:max-h-[170px] S " : "max-h-[70px] "
+      )}
+    >
       <div
         className={classNames(
-          "inline-flex max-lg:hidden rounded-full p-[8px] bg-gradient-to-r from-blue-400 to-fuchsia-500 shadow-inner items-center  transition-opacity duration-1000",
-          {
-            "opacity-100 ": isExpanded,
-            "opacity-0": !isExpanded,
-          }
+          "inline-flex max-lg:flex-col max-lg:w-10 max-lg:p-[5px]  max-lg:gap-4 rounded-full p-[8px] bg-gradient-to-r from-blue-400 to-fuchsia-500 shadow-inner  items-center  transition-opacity ease-in duration-100 ",
+          isExpanded ? "opacity-100 " : "opacity-0 "
         )}
       >
         <Link
@@ -56,7 +58,7 @@ export function ProfileBtn({ item }) {
           <span>
             <BuyerIcon />
           </span>
-          <span>Buyer</span>
+          <span className="max-lg:hidden"> Buyer</span>
         </Link>
         <Link
           to="/overview"
@@ -70,12 +72,12 @@ export function ProfileBtn({ item }) {
           <span>
             <SellerIcon />
           </span>
-          <span>Seller</span>
+          <span className="max-lg:hidden">Seller</span>
         </Link>
       </div>
 
       <button
-        className="inline-flex justify-between w-full items-center"
+        className="inline-flex justify-between w-full items-center max-lg:justify-center"
         onClick={handleClick}
       >
         <div className="inline-flex justify-start gap-3 items-center">
@@ -85,7 +87,7 @@ export function ProfileBtn({ item }) {
           </span>
         </div>
 
-        <span className="text-primary-100 ">
+        <span className="text-primary-100 max-lg:hidden ">
           {isExpanded ? (
             <HiChevronUp className="transform rotate-0 transition-transform ease-in-out duration-300" />
           ) : (

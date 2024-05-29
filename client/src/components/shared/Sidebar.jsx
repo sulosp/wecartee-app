@@ -10,7 +10,7 @@ import ViewMode from './viewMode'
 
 
 const LinkClasses =
-  "text-primary-100 hover:text-primary-100  p-20 w-full flex  flex-row justify-start  items-center gap-3  max-lg:justify-center hover:bg-primary-700 text-sm font-normal leading-tight max-lg:hidden lg:flex  ";
+  "text-primary-100 hover:text-primary-100  p-20 max-lg:text-lg w-full flex  flex-row justify-start  items-center gap-3  max-lg:justify-center hover:bg-primary-700 text-sm font-normal leading-tight lg:flex  ";
 
 export default function Sidebar() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);
@@ -88,7 +88,7 @@ function SidebarLink({ item }) {
       )}
     >
       <span>{item.icon}</span>
-      <span>{item.label}</span>
+      <span className="max-lg:hidden ">{item.label}</span>
     </Link>
   );
 }
