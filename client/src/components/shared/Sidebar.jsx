@@ -5,7 +5,7 @@ import Favicon from "../../assets/favicon.svg";
 import { DASHBOARD_SIDEBAR_LINKS, DASHBOARD_SIDEBAR_BOTTOM_LINKS, SELLER_SIDEBAR_LINKS, SETTINGS_LINKS } from "../../lib/consts/navigation";
 import classNames from "classnames";
 import ToggleSwitch from "../controls/toggleSwitch";
-import Notification from "./notification";
+import Notification from "../controls/notification";
 import ViewMode from './viewMode'
 
 
@@ -49,8 +49,6 @@ export default function Sidebar() {
         </Link>
 
       <ViewModeNavigation />
-
-
       </div>
       
 
@@ -70,6 +68,7 @@ export default function Sidebar() {
         <ViewMode />
 
       </div>
+
     </div>
   );
 }
@@ -122,7 +121,6 @@ if (path === "/businessDirectory" ||  path  === "/cart" || path === "/" || path 
         {SETTINGS_LINKS.map((item) => (
           <SidebarLink key={item.key} item={item} />
         ))
-
         }
     </div>
   )
