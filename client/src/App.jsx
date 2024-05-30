@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/shared/layout";
-import Dashboard from "./components/buyer/dashboard";
+import Dashboard from "./components/buyer/dashboard/dashboard";
 import BusinessDirectory from "./components/buyer/businessDirectory";
 import Cart from "./components/buyer/cart";
 import SocialZone from "./components/buyer/socialZone";
