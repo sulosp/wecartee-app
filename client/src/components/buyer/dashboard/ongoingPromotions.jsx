@@ -1,6 +1,8 @@
 import React from "react";
 import Search from "../../controls/search";
 import Filter from "../../controls/filter";
+import DateFilter from "../../controls/dateFilter";
+
 
 export function OngoingPromotions() {
   return (
@@ -19,6 +21,7 @@ export function OngoingPromotions() {
         <div className="flex flex-row justify-end items-center gap-3.5">
             <Search />
             <Filter />
+            <DateFilter />
           </div>
       </div>
    
