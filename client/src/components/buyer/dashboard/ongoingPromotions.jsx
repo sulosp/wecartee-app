@@ -2,7 +2,7 @@ import React from "react";
 import Search from "../../controls/search";
 import Filter from "../../controls/filter";
 import DateFilter from "../../controls/dateFilter";
-import {PROMOTIONS} from "./../../../db/Promotions";
+import { BUSINESS_DIRECTORY } from "../../../db/businessDirectory";
 
 export default function OngoingPromotions() {
   return (
@@ -23,10 +23,10 @@ export default function OngoingPromotions() {
         </div>
       </div>
 
-      <table>
+      <table >
         <thead>
           <tr className="w-full text-body-md text-primary-400 font-semibold">
-            <td>
+            <td  className="p-8 ">
               <input
                 type="checkbox"
                 value=""
@@ -42,20 +42,61 @@ export default function OngoingPromotions() {
             <td>Info</td>
           </tr>
         </thead>
-        <tbody>
-          {PROMOTIONS.map((promotion, index) => (
-            <tr key={index}>
+        <tbody >
+          {BUSINESS_DIRECTORY.map((promotion, index) => (
+            <tr key={index} className="w-full justify-between items-center">
+              <td className="p-8 ">
+                <input
+                  type="checkbox"
+                  value=""
+                  className="checkbox border border-primary-100 bg-primary-100"
+                />
+              </td>
+
               <td>{promotion.business}</td>
-              <td>{promotion.category}</td>
-              <td>{promotion.startDate}</td>
-              <td>{promotion.endDate}</td>
+
+              <td>
+                {promotion.category.map((category, categoryIndex) => (
+                  <span
+                    key={categoryIndex}
+                    className="text-label-md text-primary-400 py-5 px-12 mx-3 rounded-full bg-primary-100">
+                    {category}
+                  </span>
+                ))}
+              </td>
+
+              <td>{formatCustomDate(promotion.startDate)}</td>
+              <td>{formatCustomDate(promotion.endDate)}</td>
               <td>{promotion.products}</td>
-              <td>{promotion.save}</td>
-              <td>{promotion.info}</td>
+              <td>{promotion.save ? "Yes" : "No"}</td>
+              <td>
+                <a href={promotion.info}>More Info</a>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
   );
+}
+
+function formatCustomDate(date) {
+  const months = [
+    "JAN",
+    "FEB",
+    "MAR",
+    "APR",
+    "MAY",
+    "JUN",
+    "JUL",
+    "AUG",
+    "SEP",
+    "OCT",
+    "NOV",
+    "DEC",
+  ];
+  let day = date.getDate().toString().padStart(2, "0");
+  let month = months[date.getMonth()]; // Month is 0-indexed
+  let year = date.getFullYear().toString().slice(-2); // Get last two digits of the year
+  return `${day} ${month} ${year}`;
 }
