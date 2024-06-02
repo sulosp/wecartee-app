@@ -6,89 +6,11 @@ import Rating from "../controls/rating";
 import Save from "../controls/save";
 import { Link } from "react-router-dom";
 import { HiChevronRight } from "react-icons/hi";
-
-const BUSINESS_DIRECTORY = [
-  {
-    key: "001",
-    business: "Macdonalds",
-    category: ["Food", "Drink"],
-    startDate: new Date("2024-01-25"),
-    endDate: new Date("2024-04-20"),
-    products: 25,
-    save: true,
-    info: "/macdonalds",
-    iconPath: "/assets/seller_profiles/macdonalds.svg",
-    rating: 4,
-  },
-  {
-    key: "002",
-    business: "Heineken",
-    category: ["Beverages"],
-    startDate: new Date("2024-02-20"),
-    endDate: new Date("2024-04-20"),
-    products: 50,
-    save: false,
-    info: "/heineken",
-    iconPath: "/assets/seller_profiles/Heineken.svg",
-    rating: 3,
-  },
-
-  {
-    key: "003",
-    business: "Chipotle",
-    category: ["Food"],
-    startDate: new Date("2024-03-10"),
-    endDate: new Date("2024-04-25"),
-    products: 50,
-    save: true,
-    info: "/chipotle",
-    iconPath: "/assets/seller_profiles/chipotle.svg",
-    rating: 4,
-  },
-
-  {
-    key: "004",
-    business: "Nestle",
-    category: ["Food", "Drink", "Baby Products"],
-    startDate: new Date("2024-03-22"),
-    endDate: new Date("2024-04-22"),
-    products: 35,
-    save: false,
-    info: "/nestle",
-    iconPath: "/assets/seller_profiles/nestle.svg",
-    rating: 3.75,
-  },
-
-  {
-    key: "005",
-    business: "Feedzai",
-    category: ["Food", "Drink", "Baby Products"],
-    startDate: new Date("2024-03-18"),
-    endDate: new Date("2024-04-26"),
-    products: 25,
-    save: true,
-    info: "/feedzai",
-    iconPath: "/assets/seller_profiles/feedzai.svg",
-    rating: 4,
-  },
-
-  {
-    key: "006",
-    business: "Nike",
-    category: ["Shoes"],
-    startDate: new Date("2024-03-22"),
-    endDate: new Date("2024-04-30"),
-    products: 25,
-    save: true,
-    info: "/nike",
-    iconPath: "/assets/seller_profiles/nike.svg",
-    rating: 4,
-  },
-];
+import { BUSINESS_DIRECTORY_LIST } from "../../lib/businessDirectoryList";
 
 export default function OngoingPromotions() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full">
       <div className="flex w-full justify-between items-center pb-20 border-b border-surface-100  ">
         <div className="flex flex-col justify-start gap-2">
           <span className="text-primary-400 text-headline-sm">
@@ -107,11 +29,11 @@ export default function OngoingPromotions() {
 
       <table className="flex w-full flex-col">
         <thead>
-          <tr className="w-full flex justify-between items-center text-body-md text-primary-400 font-semibold">
-            <td className="flex justify-center items-center   gap-3 p-3 min-h-10 basis-2/12 ">
+          <tr className="flex justify-between items-center text-body-md text-primary-400 font-semibold">
+            <td className="flex justify-start items-center   gap-3 p-3 min-h-10 basis-2/12 ">
               Business Name
             </td>
-            <td className="flex justify-center items-center  gap-3 p-3 min-h-10 basis-3/12 ">
+            <td className="flex justify-start items-center  gap-3 p-3 min-h-10 basis-3/12 ">
               Category
             </td>
             <td className="flex justify-center items-center  gap-3 p-3 min-h-10 basis-2/12 ">
@@ -133,7 +55,7 @@ export default function OngoingPromotions() {
           </tr>
         </thead>
         <tbody>
-          {BUSINESS_DIRECTORY.map((promotion, index) => (
+          {BUSINESS_DIRECTORY_LIST.map((promotion, index) => (
             <tr key={index} className="w-full flex ">
               <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-3 p-3 basis-2/12 ">
                 <img
