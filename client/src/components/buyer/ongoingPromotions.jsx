@@ -77,7 +77,7 @@ const BUSINESS_DIRECTORY = [
     products: 25,
     save: true,
     info: "/nike",
-    icon:'/assets/seller_profiles/nike.svg',
+    iconPath:'/assets/seller_profiles/nike.svg',
     rating:4,
   },
 ];
@@ -105,14 +105,8 @@ export default function OngoingPromotions() {
       <table>
         <thead>
           <tr className="w-full text-body-md text-primary-400 font-semibold">
-            <td className="p-8 ">
-              <input
-                type="checkbox"
-                value=""
-                className="checkbox border border-primary-100 bg-primary-100"
-              />
-            </td>
-            <td>Business Name</td>
+            
+            <td className= "p-3 ">Business Name</td>
             <td>Category</td>
             <td className="text-center">Start Date</td>
             <td className="text-center">End Date</td>
@@ -124,16 +118,8 @@ export default function OngoingPromotions() {
         <tbody>
           {BUSINESS_DIRECTORY.map((promotion, index) => (
             <tr key={index} className="w-full ">
-              <td className="p-8 ">
-                <input
-                  type="checkbox"
-                  value=""
-                  className="checkbox border border-primary-100 bg-primary-100"
-                />
-              </td>
-
-              <td className="flex flex-col justify-start items-center text-body-md text-primary-400 h-full">
-                <img src={promotion.iconPath}  alt="profile img"/>
+               <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-3 p-3 ">
+                <img src={promotion.iconPath}  alt="profile img" className = "w-10 h-10 rounded-full"/>
                 <span>{promotion.business}</span>
               </td>
 
