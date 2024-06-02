@@ -2,9 +2,9 @@ import React from "react";
 import Search from "../controls/search";
 import Filter from "../controls/filter";
 import DateFilter from "../controls/dateFilter";
-import Rating from '../controls/rating'
-import Save from '../controls/save'
-import {Link} from 'react-router-dom';
+import Rating from "../controls/rating";
+import Save from "../controls/save";
+import { Link } from "react-router-dom";
 import { HiChevronRight } from "react-icons/hi";
 
 const BUSINESS_DIRECTORY = [
@@ -89,7 +89,7 @@ const BUSINESS_DIRECTORY = [
 export default function OngoingPromotions() {
   return (
     <div className="flex flex-col">
-      <div className="inline-flex w-full justify-between items-center pb-20 border-b border-surface-100  ">
+      <div className="flex w-full justify-between items-center pb-20 border-b border-surface-100  ">
         <div className="flex flex-col justify-start gap-2">
           <span className="text-primary-400 text-headline-sm">
             Ongoing Promotions
@@ -105,36 +105,49 @@ export default function OngoingPromotions() {
         </div>
       </div>
 
-      <table>
+      <table className="flex w-full flex-col">
         <thead>
-          <tr className="w-full text-body-md text-primary-400 font-semibold">
-            <td className="p-3 ">Business Name</td>
-            <td>Category</td>
-            <td className="text-center">Start Date</td>
-            <td className="text-center">End Date</td>
-            <td className="text-center">Products</td>
-            <td>Save</td>
-            <td>Info</td>
+          <tr className="w-full flex justify-between items-center text-body-md text-primary-400 font-semibold">
+            <td className="flex justify-center items-center   gap-3 p-3 min-h-10 basis-2/12 ">
+              Business Name
+            </td>
+            <td className="flex justify-center items-center  gap-3 p-3 min-h-10 basis-3/12 ">
+              Category
+            </td>
+            <td className="flex justify-center items-center  gap-3 p-3 min-h-10 basis-2/12 ">
+              Start Date
+            </td>
+            <td className="flex justify-center items-center  gap-3 p-3 min-h-10 basis-2/12 ">
+              End Date
+            </td>
+            <td className="flex justify-center items-center gap-3 p-3 min-h-10 basis-1/12 ">
+              Products
+            </td>
+            <td className="flex justify-center items-center  gap-3 p-3 min-h-10 basis-1/12 ">
+              Save
+            </td>
+            <td className="flex justify-center items-center  gap-3 p-3 min-h-10 basis-1/12 ">
+              {" "}
+              Info
+            </td>
           </tr>
         </thead>
         <tbody>
           {BUSINESS_DIRECTORY.map((promotion, index) => (
-            <tr key={index} className="w-full">
-              <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-3 p-3 h-full ">
+            <tr key={index} className="w-full flex ">
+              <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-3 p-3 basis-2/12 ">
                 <img
                   src={promotion.iconPath}
                   alt="profile img"
                   className="w-10 h-10 rounded-full"
                 />
-                <div className="flex flex-col justify-center items-start h-full">
-                  
+                <div className="flex flex-col justify-center items-start min-h-full">
                   <span className="text-left">{promotion.business}</span>
                   <Rating rating={Math.floor(promotion.rating)} />
-
                 </div>
               </td>
 
-              <td>
+              <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-1 p-3 basis-3/12">
                 {promotion.category.map((category, categoryIndex) => (
                   <span
                     key={categoryIndex}
@@ -145,18 +158,22 @@ export default function OngoingPromotions() {
                 ))}
               </td>
 
-              <td className="text-body-md text-primary-400 text-center">
+              <td className="inline-flex justify-center items-center text-body-md text-primary-400 p-3 basis-2/12">
                 {formatCustomDate(promotion.startDate)}
               </td>
-              <td className="text-body-md text-primary-400 text-center">
+              <td className="inline-flex justify-center items-center text-body-md text-primary-400 p-3 basis-2/12">
                 {formatCustomDate(promotion.endDate)}
               </td>
-              <td className="text-body-md text-primary-400 text-center">
+              <td className="inline-flex justify-center items-center text-body-md text-primary-400 p-3 basis-1/12 ">
                 {promotion.products}
               </td>
-              <td className="text-[24px]"><Save save={promotion.save} /></td>
-              <td>
-                <Link className=" p-2" to={promotion.info}><HiChevronRight className="fill-primary-100 bg-primary-900 rounded-full  " /></Link>
+              <td className="text-[24px] flex basis-1/12 justify-center items-center">
+                <Save save={promotion.save} />
+              </td>
+              <td className=" flex basis-1/12 justify-center items-center">
+                <Link className=" p-2" to={promotion.info}>
+                  <HiChevronRight className="fill-primary-100 bg-primary-900 rounded-full  " />
+                </Link>
               </td>
             </tr>
           ))}
