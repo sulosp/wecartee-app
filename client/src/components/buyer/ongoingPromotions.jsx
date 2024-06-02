@@ -4,6 +4,8 @@ import Filter from "../controls/filter";
 import DateFilter from "../controls/dateFilter";
 import Rating from '../controls/rating'
 import Save from '../controls/save'
+import {Link} from 'react-router-dom';
+import { HiChevronRight } from "react-icons/hi";
 
 const BUSINESS_DIRECTORY = [
   {
@@ -117,14 +119,14 @@ export default function OngoingPromotions() {
         </thead>
         <tbody>
           {BUSINESS_DIRECTORY.map((promotion, index) => (
-            <tr key={index} className="w-full ">
-              <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-3 p-3 ">
+            <tr key={index} className="w-full">
+              <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-3 p-3 h-full ">
                 <img
                   src={promotion.iconPath}
                   alt="profile img"
                   className="w-10 h-10 rounded-full"
                 />
-                <div className="flex flex-col justify-center items-start">
+                <div className="flex flex-col justify-center items-start h-full">
                   
                   <span className="text-left">{promotion.business}</span>
                   <Rating rating={Math.floor(promotion.rating)} />
@@ -152,9 +154,9 @@ export default function OngoingPromotions() {
               <td className="text-body-md text-primary-400 text-center">
                 {promotion.products}
               </td>
-              <td className="text-body-md"><Save save={promotion.save} /></td>
+              <td className="text-[24px]"><Save save={promotion.save} /></td>
               <td>
-                <a href={promotion.info}>More Info</a>
+                <Link className=" p-2" to={promotion.info}><HiChevronRight className="fill-primary-100 bg-primary-900 rounded-full  " /></Link>
               </td>
             </tr>
           ))}

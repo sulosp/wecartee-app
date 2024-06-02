@@ -4,10 +4,10 @@ import classNames from 'classnames';
 
 export default function Save({save}){
     return(
-        <div>
+        <button>
 
          <span><HiHeart className ={classNames(save? 'fill-primary-200' : 'fill-primary-100' ) } /></span>  
             
-        </div>
+        </button>
     )
 }
