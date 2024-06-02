@@ -2,30 +2,32 @@ import React from "react";
 import Search from "../controls/search";
 import Filter from "../controls/filter";
 import DateFilter from "../controls/dateFilter";
+import Rating from '../controls/rating'
+import Save from '../controls/save'
 
 const BUSINESS_DIRECTORY = [
   {
     key: "001",
     business: "Macdonalds",
     category: ["Food", "Drink"],
-    startDate : new Date("2024-01-25"),
+    startDate: new Date("2024-01-25"),
     endDate: new Date("2024-04-20"),
     products: 25,
     save: true,
     info: "/macdonalds",
-    iconPath: '/assets/seller_profiles/macdonalds.svg',
+    iconPath: "/assets/seller_profiles/macdonalds.svg",
     rating: 4,
   },
   {
     key: "002",
     business: "Heineken",
     category: ["Beverages"],
-    startDate :new Date("2024-02-20"),
-    endDate : new Date("2024-04-20"),
+    startDate: new Date("2024-02-20"),
+    endDate: new Date("2024-04-20"),
     products: 50,
-    save: true,
+    save: false,
     info: "/heineken",
-    iconPath : '/assets/seller_profiles/Heineken.svg',
+    iconPath: "/assets/seller_profiles/Heineken.svg",
     rating: 3,
   },
 
@@ -33,55 +35,54 @@ const BUSINESS_DIRECTORY = [
     key: "003",
     business: "Chipotle",
     category: ["Food"],
-    startDate :new Date("2024-03-10"),
-    endDate : new Date("2024-04-25"),
+    startDate: new Date("2024-03-10"),
+    endDate: new Date("2024-04-25"),
     products: 50,
     save: true,
     info: "/chipotle",
-    iconPath : '/assets/seller_profiles/chipotle.svg',
-    rating:4,
+    iconPath: "/assets/seller_profiles/chipotle.svg",
+    rating: 4,
   },
 
   {
     key: "004",
     business: "Nestle",
-    category: ["Food", "Drink" , "Baby Products"],
-    startDate :new Date("2024-03-22"),
-    endDate : new Date("2024-04-22"),
+    category: ["Food", "Drink", "Baby Products"],
+    startDate: new Date("2024-03-22"),
+    endDate: new Date("2024-04-22"),
     products: 35,
-    save: true,
+    save: false,
     info: "/nestle",
-    iconPath : '/assets/seller_profiles/nestle.svg',
-    rating:3.75,
+    iconPath: "/assets/seller_profiles/nestle.svg",
+    rating: 3.75,
   },
 
   {
     key: "005",
     business: "Feedzai",
-    category: ["Food", "Drink" , "Baby Products"],
-    startDate :new Date("2024-03-18"),
-    endDate : new Date("2024-04-26"),
+    category: ["Food", "Drink", "Baby Products"],
+    startDate: new Date("2024-03-18"),
+    endDate: new Date("2024-04-26"),
     products: 25,
     save: true,
     info: "/feedzai",
-    iconPath: '/assets/seller_profiles/feedzai.svg',
-    rating:4,
+    iconPath: "/assets/seller_profiles/feedzai.svg",
+    rating: 4,
   },
 
   {
     key: "006",
     business: "Nike",
     category: ["Shoes"],
-    startDate :new Date("2024-03-22"),
-    endDate : new Date("2024-04-30"),
+    startDate: new Date("2024-03-22"),
+    endDate: new Date("2024-04-30"),
     products: 25,
     save: true,
     info: "/nike",
-    iconPath:'/assets/seller_profiles/nike.svg',
-    rating:4,
+    iconPath: "/assets/seller_profiles/nike.svg",
+    rating: 4,
   },
 ];
-
 
 export default function OngoingPromotions() {
   return (
@@ -105,8 +106,7 @@ export default function OngoingPromotions() {
       <table>
         <thead>
           <tr className="w-full text-body-md text-primary-400 font-semibold">
-            
-            <td className= "p-3 ">Business Name</td>
+            <td className="p-3 ">Business Name</td>
             <td>Category</td>
             <td className="text-center">Start Date</td>
             <td className="text-center">End Date</td>
@@ -118,9 +118,18 @@ export default function OngoingPromotions() {
         <tbody>
           {BUSINESS_DIRECTORY.map((promotion, index) => (
             <tr key={index} className="w-full ">
-               <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-3 p-3 ">
-                <img src={promotion.iconPath}  alt="profile img" className = "w-10 h-10 rounded-full"/>
-                <span>{promotion.business}</span>
+              <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-3 p-3 ">
+                <img
+                  src={promotion.iconPath}
+                  alt="profile img"
+                  className="w-10 h-10 rounded-full"
+                />
+                <div className="flex flex-col justify-center items-start">
+                  
+                  <span className="text-left">{promotion.business}</span>
+                  <Rating rating={Math.floor(promotion.rating)} />
+
+                </div>
               </td>
 
               <td>
@@ -143,7 +152,7 @@ export default function OngoingPromotions() {
               <td className="text-body-md text-primary-400 text-center">
                 {promotion.products}
               </td>
-              <td>{promotion.save ? "Yes" : "No"}</td>
+              <td className="text-body-md"><Save save={promotion.save} /></td>
               <td>
                 <a href={promotion.info}>More Info</a>
               </td>
