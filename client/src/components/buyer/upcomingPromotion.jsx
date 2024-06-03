@@ -30,10 +30,12 @@ export default function ImageCarousel() {
   }, [nextPromotion]);
 
   return (
-    <div className="flex flex-col justify-start items-start h-full bg-white gap-5 p-20 rounded-lg">
+    <div className="flex flex-col justify-start items-start h-auto bg-white gap-5 p-20 rounded-lg">
+
       <span className="text-title-md font-semibold text-primary-400 ">
         Upcoming Promotions
       </span>
+
       <div className="image-carousel inline-flex w-full justify-center items-center">
         <button
           onClick={prevPromotion}
@@ -41,10 +43,11 @@ export default function ImageCarousel() {
         >
           <HiChevronLeft />
         </button>
-        <div className="w-full inline-flex justify-center items-center">
-          <div className="relative w-96 h-64 z-2 overflow-hidden rounded-md">
+
+        <div className="w-full inline-flex justify-between items-center">
+         
             <img
-              className="absolute top-0 left-0 w-full h-full transition duration-1000"
+              className="w-96 h-84 z-2 overflow-hidden rounded-md"
               src={
                 promotionsWithImages[
                   (currentPromotionIndex - 1 + promotionsWithImages.length) %
@@ -53,19 +56,18 @@ export default function ImageCarousel() {
               }
               alt={`Promotion ${currentPromotionIndex - 1}`}
             />
-          </div>
-          <div className="relative w-56 h-48 -ml-100 z-1 overflow-hidden rounded-md">
-            <img
-              className="w-full h-full transition duration-1000"
+
+<img
+              className="w-56 h-48 -ml-100 z-1 overflow-hidden rounded-md transition duration-1000"
               src={
                 promotionsWithImages[currentPromotionIndex].upcomingPromotion
               }
               alt={`Promotion ${currentPromotionIndex}`}
             />
-          </div>
-          <div className="relative w-36 h-24 -ml-100 z-0 overflow-hidden rounded-md">
+        
+         
             <img
-              className="absolute top-0 left-0 w-full h-full transition duration-1000"
+              className="w-36 h-24 -ml-100 z-0 overflow-hidden rounded-md transition duration-1000"
               src={
                 promotionsWithImages[
                   (currentPromotionIndex + 1) % promotionsWithImages.length
@@ -74,14 +76,17 @@ export default function ImageCarousel() {
               alt={`Promotion ${currentPromotionIndex + 1}`}
             />
           </div>
-        </div>
-        <button
+          
+          <button
           onClick={nextPromotion}
           className="flex justify-center items-center p-3 rounded-md  bg-primary-100 -ml-4 size-10 z-3"
         >
           <HiChevronRight />
         </button>
+       
+        </div>
+       
       </div>
-    </div>
+   
   );
 }
