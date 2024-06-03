@@ -153,6 +153,10 @@ module.exports = {
         
       },
 
+      height:{
+        '15':'60px',
+      },
+
       zIndex: {
         '0': '0',
         '1': '1',

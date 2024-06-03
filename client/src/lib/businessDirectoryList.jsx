@@ -10,6 +10,8 @@ export const BUSINESS_DIRECTORY_LIST = [
       info: "/macdonalds",
       iconPath: "/assets/seller_profiles/macdonalds.svg",
       rating: 4,
+      upcomingPromotion:null,
+      
     },
     {
       key: "002",
@@ -22,6 +24,7 @@ export const BUSINESS_DIRECTORY_LIST = [
       info: "/heineken",
       iconPath: "/assets/seller_profiles/Heineken.svg",
       rating: 3,
+      upcomingPromotion:null,
     },
   
     {
@@ -35,6 +38,7 @@ export const BUSINESS_DIRECTORY_LIST = [
       info: "/chipotle",
       iconPath: "/assets/seller_profiles/chipotle.svg",
       rating: 4,
+      upcomingPromotion:null,
     },
   
     {
@@ -48,6 +52,7 @@ export const BUSINESS_DIRECTORY_LIST = [
       info: "/nestle",
       iconPath: "/assets/seller_profiles/nestle.svg",
       rating: 3.75,
+      upcomingPromotion :"/assets/upcomingPromotions/SuperSale.png"
     },
   
     {
@@ -61,6 +66,7 @@ export const BUSINESS_DIRECTORY_LIST = [
       info: "/feedzai",
       iconPath: "/assets/seller_profiles/feedzai.svg",
       rating: 4,
+      upcomingPromotion :null,
     },
   
     {
@@ -74,5 +80,34 @@ export const BUSINESS_DIRECTORY_LIST = [
       info: "/nike",
       iconPath: "/assets/seller_profiles/nike.svg",
       rating: 4,
+      upcomingPromotion:null,
+    },
+
+    {
+      key: "007",
+      business: "Dreamron",
+      category: ["Haircare", "Beauty"],
+      startDate: new Date("2024-03-25"),
+      endDate: new Date("2024-05-01"),
+      products: 10,
+      save: true,
+      info: "/dreamron",
+      iconPath: "/assets/seller_profiles/dreamaron.svg",
+      rating: 4,
+      upcomingPromotion:"/assets/upcomingPromotions/haircareProducts.png",
+    },
+
+    {
+      key: "008",
+      business: "Loreal",
+      category: ["Skincare" , "Haircare" , "Beauty"],
+      startDate: new Date("2024-03-25"),
+      endDate: new Date("2024-05-01"),
+      products: 10,
+      save: false,
+      info: "/loreal",
+      iconPath: "/assets/seller_profiles/loreal.svg",
+      rating: 4,
+      upcomingPromotion:"/assets/upcomingPromotions/glamourRetreat.png",
     },
   ];
