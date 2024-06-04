@@ -10,7 +10,7 @@ export default function Layout() {
         <Sidebar />
       </div>
 
-      <div className="flex gap-5 flex-col justify-start items-center lg:min-h-lvh w-5/6 p-24 bg-surface-100 overflow-x-hidden ">
+      <div className="lg:min-h-lvh w-5/6 overflow-x-hidden bg-surface-100 ">
         <div className="w-full overscroll-y-contain">
           <Outlet />
         </div>

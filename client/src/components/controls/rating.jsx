@@ -10,7 +10,7 @@ export default function Rating({ rating }) {
             {[...Array(5)].map((_, index) => (
                 <HiStar
                     key={index}
-                    className={`star ${index < rating ? 'fill-yellow-400' : 'fill-yellow-400 opacity-25'}`}
+                    className={`star ${index < rating ? 'fill-yellow-400 stroke-yellow-400 stroke-1' : 'fill-white stroke-yellow-400 stroke-1'}`}
                 />
             ))}
 

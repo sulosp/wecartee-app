@@ -11,8 +11,8 @@ export const BUSINESS_DIRECTORY_LIST = [
       iconPath: "/assets/seller_profiles/macdonalds.svg",
       rating: 4,
       upcomingPromotion:null,
-      
     },
+      
     {
       key: "002",
       business: "Heineken",
