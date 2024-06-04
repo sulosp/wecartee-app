@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Dashboard.js
 import React from "react";
 import Search from './../controls/search'
@@ -20,6 +21,31 @@ function Dashboard() {
          <Search />
          <Filter />
         </div>
+=======
+import React from "react";
+import OngoingPromotions from "./ongoingPromotions.jsx";
+import SaveWidget from "./saveWidget.jsx";
+import UpcomingPromotion from "./upcomingPromotion.jsx";
+
+function Dashboard() {
+  return (
+    <div className="flex gap-5 flex-col justify-start items-center max-h-screen  p-24 bg-surface-100 w-full ">
+
+      <div className="w-full flex p-20 bg-white rounded-lg justify-center items-center h-auto ">
+        <OngoingPromotions />
+      </div>
+
+      <div className="flex flex-row justify-between w-full gap-5 h-auto">
+
+        <div className="w-1/2 ">
+          <SaveWidget />
+        </div>
+
+        <div className="w-1/2">
+        <UpcomingPromotion />
+        </div>
+
+>>>>>>> b64d44e65a0c967ea04e5fb888d683035c4e061e
       </div>
     </div>
   );

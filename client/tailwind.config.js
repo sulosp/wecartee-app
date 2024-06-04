@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}",],
+  content: ["./src/**/**/**/*.{js,jsx,ts,tsx}",],
   theme: {
     container: {
       padding: {     
@@ -137,6 +137,7 @@ module.exports = {
 
       margin:{
         '2': '2px',
+        '3' : '3px',
         '10':'10px',
         '12':'12px',
         '20':'20px',
@@ -150,6 +151,10 @@ module.exports = {
       width: {
         '15': '60px',
         
+      },
+
+      height:{
+        '15':'60px',
       },
 
       zIndex: {

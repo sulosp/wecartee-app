@@ -97,7 +97,7 @@ function ViewModeNavigation(){
   const location = useLocation();
   const path = location.pathname;
 
-if (path === "/businessDirectory" ||  path  === "/cart" || path === "/" || path === "/socialZone" || path === "/savedBusinesses" || path  === "/buyerchat") {
+if (path === "/businessDirectory" ||  path  === "/cart" || path === "/"  || path === "/socialZone" || path === "/savedBusinesses" || path  === "/buyerchat") {
   return (
     
     <div className="flex flex-col flex-shrink-0 items-center">

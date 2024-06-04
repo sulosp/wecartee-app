@@ -1,10 +1,22 @@
 import React, { useState } from "react";
-import { USER } from "../../lib/consts/userDetails";
 import { HiChevronUp } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
 import { ReactComponent as BuyerIcon } from "../../assets/buyerIcon.svg";
 import { ReactComponent as SellerIcon } from "../../assets/sellerIcon.svg";
 import classNames from "classnames";
+
+
+
+const USER = [
+  {
+      
+      key :'user',  
+       name : 'Mark S',
+       avatar: '/assets/userImg.png',
+           
+                  
+      }
+]
 
 export default function ViewMode() {
   return (
