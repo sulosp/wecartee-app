@@ -50,15 +50,13 @@ export function SearchBar() {
           {/* Render search results here */}
           <div className="flex flex-col gap-2 mt-5">
           {searchResults.map((item) => (
-      
-             
-             <Link key={item.key} to ={item.info} className="p-10 inline-flex gap-2 items-center hover:bg-secondary-100 bg-surface-100 rounded-lg">
+            
+                <Link key={item.key} to ={item.info} className="p-10 inline-flex gap-2 items-center hover:bg-secondary-100 bg-surface-100 rounded-lg">
                 <img src={item.iconPath} alt={item.business} className="rounded-full w-10"/>
                <span className="text-label-lg text-primary-400">{item.business}</span>
                 </Link>
 
-             
-          ))}
+              ))}
           </div>
         </div>
       </div>
