@@ -5,6 +5,11 @@ export default function SocialZone() {
 
     return (
 
-        <div><SearchBar /></div>
+        <div className="flex flex-row">
+            <div className="flex basis-2/12"><SearchBar /></div>
+        </div>
+        
+
+
     )
 }

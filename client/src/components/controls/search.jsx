@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 import { BUSINESS_DIRECTORY_LIST } from "../../lib/businessDirectoryList";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function Search({ setSearchResults }) {
   const [searchText, setSearchText] = useState("");
@@ -10,8 +10,8 @@ export default function Search({ setSearchResults }) {
     const searchText = e.target.value.toLowerCase();
     setSearchText(searchText);
 
-    const filteredList = BUSINESS_DIRECTORY_LIST.filter(
-      (item) => item.business.toLowerCase().includes(searchText)
+    const filteredList = BUSINESS_DIRECTORY_LIST.filter((item) =>
+      item.business.toLowerCase().includes(searchText)
     );
     setSearchResults(filteredList);
   };
@@ -44,19 +44,45 @@ export function SearchBar() {
 
   return (
     <div className="flex flex-row gap-0 w-full">
-      <div className="flex flex-col basis-3/12 p-24 gap-6 bg-white min-h-screen h-full shadow-sm">
+      <div className="flex flex-col p-24 gap-6 bg-white min-h-screen h-full shadow-sm">
         <div className="overscroll-y-contain h-full">
           <Search setSearchResults={setSearchResults} />
           {/* Render search results here */}
-          <div className="flex flex-col gap-2 mt-5">
-          {searchResults.map((item) => (
-            
-                <Link key={item.key} to ={item.info} className="p-10 inline-flex gap-2 items-center hover:bg-secondary-100 bg-surface-100 rounded-lg">
-                <img src={item.iconPath} alt={item.business} className="rounded-full w-10"/>
-               <span className="text-label-lg text-primary-400">{item.business}</span>
-                </Link>
 
-              ))}
+          <div className="flex flex-col gap-2 mt-5">
+            {searchResults.length > 0
+              ? searchResults.map((item) => (
+                  <Link
+                    key={item.key}
+                    to={item.info}
+                    className="p-10 inline-flex gap-2 items-center hover:bg-secondary-100 bg-surface-100 rounded-lg"
+                  >
+                    <img
+                      src={item.iconPath}
+                      alt={item.business}
+                      className="rounded-full w-10"
+                    />
+                    <span className="text-label-lg text-primary-400">
+                      {item.business}
+                    </span>
+                  </Link>
+                ))
+              : BUSINESS_DIRECTORY_LIST.map((item) => (
+                  <Link
+                    key={item.key}
+                    to={item.info}
+                    className="p-10 inline-flex gap-2 items-center hover:bg-secondary-100 bg-surface-100 rounded-lg"
+                  >
+                    <img
+                      src={item.iconPath}
+                      alt={item.business}
+                      className="rounded-full w-10"
+                    />
+                    <span className="text-label-lg text-primary-400">
+                      {item.business}
+                    </span>
+                  </Link>
+                ))}
           </div>
         </div>
       </div>
