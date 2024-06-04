@@ -8,7 +8,8 @@ function Dashboard() {
   return (
     <div className="w-full p-20 bg-white rounded-lg justify-center items-center h-auto ">
       <div className="inline-flex w-full justify-between items-center pb-20 border-b border-surface-100  ">
-        <div className="flex flex-col justify-start gap-2">
+        <div className="flex
+         flex-col justify-start gap-2">
           <span className="text-primary-400 text-headline-sm">
             Ongoing Promotions
           </span>
