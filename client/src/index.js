@@ -16,4 +16,3 @@ root.render(
   </React.StrictMode>
 );
 
-// create the scrollSmoother before your scrollTriggers
