@@ -1,21 +1,17 @@
-import React from 'react'
-import { STORE_DATA } from '../../lib/storeData'
+import React from "react";
+import { STORE_DATA } from "../../lib/storeData";
+import VR from "../buyer/vr";
 
 export default function Store() {
+  return (
+    <div className="flex flex-col w-full h-full p-50 relative">
+      <div className="absolute top-0 w-full inline-flex justify-between items-center"></div>
 
-    return (
-        <div className='flex flex-col w-10/12 h-full bg-cover bg-center bg-blend-darken p-50'>
+      {/*//VR img group starting img src={STORE_DATA[0].views[0].img} className="w-full" alt="store" */}
 
-            <div className='relative top-0 w-full inline-flex justify-between items-center'>
-
-            </div>
-
-            {/*//VR img group starting*/}
-
-            <div className='inline-flex overflow-hidden'>
-                <img src={STORE_DATA[0].views[0].img} className='w-full' alt='store' />
-
-            </div>
-        </div>
-    )
+      <div className="inline-flex overflow-hidden">
+        <VR />
+      </div>
+    </div>
+  );
 }
