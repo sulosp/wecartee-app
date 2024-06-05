@@ -5,19 +5,19 @@ export const STORE_DATA = [
     views: [
       {
         name: "All",
-        img: "/assets/store/View-storeView.png",
+        img: "/assets/store/Nike/storeView.png",
       },
       {
         name: "Men",
-        img: "/assets/store/View-Men-1.png"
+        img: "/assets/store/Nike/Men-1.png"
       },
       {
         name:"Women",
-        img:["/assets/store/View-Women-1.png", "/assets/store-images/View-Women-2.png"]
+        img:["/assets/store/Nike/Women-1.png", "/assets/store/Nike/Women-2.png"]
       },
       {
         name: "Kids",
-        img :"/assets/store/View-Kids-1.png"
+        img :"/assets/store/Nike/Kids-1.png"
       }
     ],
   },

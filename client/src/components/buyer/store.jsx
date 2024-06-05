@@ -1,6 +1,7 @@
 import React from 'react'
+import { STORE_DATA } from '../../lib/storeData'
 
-export default function Store(){
+export default function Store() {
 
     return (
         <div className='flex flex-col w-10/12 h-full bg-cover bg-center bg-blend-darken p-50'>
@@ -9,11 +10,12 @@ export default function Store(){
 
             </div>
 
-         {/*//VR img group starting*/} 
+            {/*//VR img group starting*/}
 
-        <div className='inline-flex overflow-hidden'>
-            <img src={`${process.env.PUBLIC_URL}/assets/store/storeView.png`} alt='store'/>
-        </div>
+            <div className='inline-flex overflow-hidden'>
+                <img src={STORE_DATA[0].views[0].img} className='w-full' alt='store' />
+
+            </div>
         </div>
     )
 }
