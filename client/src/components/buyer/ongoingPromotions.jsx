@@ -27,6 +27,7 @@ export default function OngoingPromotions() {
 
   const handleSeeAllClick = () => {
     setShowPagination(false);
+      
   };
 
   const handleDisplayPaginationClick = () => {
@@ -134,7 +135,7 @@ export default function OngoingPromotions() {
           </tbody>
         ) : (
           <tbody>
-            {setSearchResults ? 
+            {searchResults.length > 0 ? 
             
             searchResults.map((promotion, index) => (
                   <tr key={index} className="w-full flex ">
