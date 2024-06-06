@@ -54,7 +54,7 @@ export function SearchBar() {
       <div
         ref={searchbarRef}
         id="searchbar"
-        className={`flex flex-col p-24 gap-6 bg-white shadow-sm transition-all   ${isSearchBarVisible ? 'w-full ease-in duration-100 overflow-hidden' : 'w-0 p-0 overflow-hidden ease-out duration-100'}`}
+        className={`flex flex-col gap-6 bg-white shadow-sm transition-all   ${isSearchBarVisible ? 'w-full ease-in duration-100 overflow-hidden p-24' : 'w-0 p-0 overflow-hidden ease-out duration-100'}`}
       >
         <div className="overscroll-y-contain h-full">
           <Search setSearchResults={setSearchResults} />

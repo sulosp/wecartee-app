@@ -9,17 +9,23 @@ export const STORE_DATA = [
       },
       {
         name: "Men",
-        img: "/assets/store/Nike/Men-1.png"
+        img: "/assets/store/Nike/Men-1.png",
       },
       {
-        name:"Women",
-        img:["/assets/store/Nike/Women-1.png", "/assets/store/Nike/Women-2.png"]
+        name: "Women",
+        img: [
+          "/assets/store/Nike/Women-1.png",         
+        ],
       },
       {
         name: "Kids",
-        img :"/assets/store/Nike/Kids-1.png"
+        img: "/assets/store/Nike/Kids-1.png",
+      },
+
+      {
+        name:'SportsWear',
+        img: "/assets/store/Nike/Women-2.png",
       }
     ],
   },
 ];
-
