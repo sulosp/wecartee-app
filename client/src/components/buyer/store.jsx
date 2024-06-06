@@ -1,5 +1,5 @@
 import React from "react";
-import { STORE_DATA } from "../../lib/storeData";
+import "aframe";
 import VR from "../buyer/vr";
 
 export default function Store() {
