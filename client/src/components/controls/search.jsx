@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { HiOutlineSearch } from "react-icons/hi";
+import React, { useState, useRef } from "react";
+import { HiOutlineSearch, HiChevronRight, HiChevronLeft } from "react-icons/hi";
 import { BUSINESS_DIRECTORY_LIST } from "../../lib/businessDirectoryList";
 import { Link } from "react-router-dom";
+import classNames from "classnames";
 
 export default function Search({ setSearchResults }) {
   const [searchText, setSearchText] = useState("");
@@ -41,16 +42,24 @@ export default function Search({ setSearchResults }) {
 
 export function SearchBar() {
   const [searchResults, setSearchResults] = useState([]);
+  const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
+  const searchbarRef = useRef(null);
+
+  const toggleSearchBar = () => {
+    setIsSearchBarVisible((prev) => !prev);
+  };
 
   return (
-    <div className="flex flex-row gap-0 w-full">
-      <div className="flex flex-col p-24 gap-6 bg-white min-h-screen h-full shadow-sm">
+    <div className="flex flex-row gap-0 w-full h-full min-h-screen ">
+      <div
+        ref={searchbarRef}
+        id="searchbar"
+        className={`flex flex-col p-24 gap-6 bg-white shadow-sm transition-all   ${isSearchBarVisible ? 'w-full ease-in duration-100 overflow-hidden' : 'w-0 p-0 overflow-hidden ease-out duration-100'}`}
+      >
         <div className="overscroll-y-contain h-full">
           <Search setSearchResults={setSearchResults} />
-          {/* Render search results here */}
-
-          <div className="flex flex-col gap-2 mt-5">
-            {searchResults.length > 0
+          <div className={classNames('flex', 'flex-col', 'gap-2', 'mt-5', 'transition-opacity', { 'opacity-100 ease-in duration-200': isSearchBarVisible, 'opacity-0 ease-out duration-100': !isSearchBarVisible })}>   
+             {searchResults.length > 0
               ? searchResults.map((item) => (
                   <Link
                     key={item.key}
@@ -86,6 +95,20 @@ export function SearchBar() {
           </div>
         </div>
       </div>
+
+      <button
+        id="searchtab"
+        className="flex flex-row justify-center items-center p-10 relative bg-primary-400"
+        onClick={toggleSearchBar}
+      >
+        <div className="absolute top-1/2 left-full z-2 p-10 text-white">
+          {isSearchBarVisible ? <HiChevronLeft /> : <HiChevronRight />}
+        </div>
+        <span className="inline-flex transform rotate-90 top-1/2 py-10 px-20 absolute -right-[50px] text-white bg-primary-400 rounded-md">
+          Search
+        </span>
+      </button>
     </div>
   );
 }
+

@@ -5,9 +5,9 @@ import '../../index.css'
 
 export default function SocialZone() {
     return (
-        <div className="flex flex-row w-full h-full">
-            <div className="flex basis-2/12 h-full"><SearchBar /></div>
-            <div className="flex basis-10/12 h-full overflow-clip"><Store /></div>
+        <div className="flex flex-row w-full h-full relative">
+            <div className="flex absolute w-2/12 z-2 h-full"><SearchBar /></div>
+            <div className="flex w-full h-full z-1 overflow-clip"><Store /></div>
         </div>
     )
 }

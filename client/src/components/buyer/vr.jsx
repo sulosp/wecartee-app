@@ -6,12 +6,12 @@ import { Entity, Scene } from "aframe-react";
 
 export default function VR() {
   return (
-    <div style={{ width: "100%", height: "960px" }}>
+    <div style={{ width: "100%", height: "1000px" }}>
       <Scene embedded>
         <a-assets>
           <img id="vr-image" src={STORE_DATA[0].views[0].img} alt="VR" />
         </a-assets>
-        <a-text value="Hello, World!"></a-text>
+        
         <Entity primitive="a-sky" src="#vr-image" scale="1 1 1"></Entity>
       </Scene>
     </div>
