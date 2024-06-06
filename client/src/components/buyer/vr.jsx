@@ -1,36 +1,19 @@
+// src/VrImage.js
 import React from "react";
 import "aframe";
 import { STORE_DATA } from "../../lib/storeData";
-import '../../index.css';
+import { Entity, Scene } from "aframe-react";
 
-const VRScene = () => {
-  const handleHotspotClick = () => {
-    alert("Hotspot clicked!");
-  };
-
+export default function VR() {
   return (
-    <div className="flex w-full h-full vr-scene-container">
-      <a-scene embedded>
+    <div style={{ width: "100%", height: "960px" }}>
+      <Scene embedded>
         <a-assets>
-          <img id="store" src={STORE_DATA[0].views[0].img} alt="Store" />
+          <img id="vr-image" src={STORE_DATA[0].views[0].img} alt="VR" />
         </a-assets>
-
-        <a-sky src="#store" rotation="0 -130 0"></a-sky>
-        <a-camera></a-camera>
-        {/* Add hotspots */}
-        <a-box
-          position="0 1.5 -3"
-          rotation="0 45 0"
-          color="#4CC3D9"
-          depth="0.5"
-          height="0.5"
-          width="0.5"
-          event-set__click="_event: click; color: yellow"
-          onClick={handleHotspotClick}
-        ></a-box>
-      </a-scene>
+        <a-text value="Hello, World!"></a-text>
+        <Entity primitive="a-sky" src="#vr-image" scale="1 1 1"></Entity>
+      </Scene>
     </div>
   );
-};
-
-export default VRScene;
+}
