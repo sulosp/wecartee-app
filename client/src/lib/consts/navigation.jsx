@@ -8,6 +8,7 @@ import {
   HiLogout, HiCollection, HiCube, HiChartBar
 } from "react-icons/hi";
 
+
 export const DASHBOARD_SIDEBAR_LINKS = [
   {
     key: "dashboard",
@@ -117,3 +118,4 @@ export const SETTINGS_LINKS = [
 
 
 ];
+

@@ -1,11 +1,15 @@
 export const STORE_DATA = [
   {
-    key: "001",
+    id: 1,
+    name: "Nike",
     tagline: "Welcome to Nike Store",
-    views: [
+    url: "/socialZone",
+    category: [
       {
+        id: 1,
         name: "All",
         img: "/assets/store/Nike/storeView.png",
+        connectedView: [2, 3],
       },
       {
         name: "Men",
@@ -13,19 +17,16 @@ export const STORE_DATA = [
       },
       {
         name: "Women",
-        img: [
-          "/assets/store/Nike/Women-1.png",         
-        ],
+        img: ["/assets/store/Nike/Women-1.png"],
       },
       {
         name: "Kids",
         img: "/assets/store/Nike/Kids-1.png",
       },
-
       {
-        name:'SportsWear',
+        name: "SportsWear",
         img: "/assets/store/Nike/Women-2.png",
-      }
+      },
     ],
   },
 ];

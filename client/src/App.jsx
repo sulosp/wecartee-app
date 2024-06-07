@@ -21,7 +21,8 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="businessDirectory" element={<BusinessDirectory />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="socialZone" element={<SocialZone />} />
+          <Route path="/socialZone" element={<SocialZone />} />
+
           <Route path="settings" element={<Settings />} />
           <Route path="savedBusinesses" element={<SavedBusinesses />} />
           <Route path="buyerchat" element={<BuyerChat />} />
