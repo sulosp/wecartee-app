@@ -41,11 +41,15 @@ export default function VR({ store }) {
         {store.category.map((cat) => (
           <React.Fragment key={cat.id}>
             <Entity primitive="a-sky" src={currentImages[cat.id]} />
-            
+            <Entity
+              geometry={{ primitive: "circle", radius: 0.1 }}
+              material={{ color: "red" }}
+              position={cat.position}
+            />
             <Entity
               geometry={{ primitive: "box", width: 0.2, height: 0.1, depth: 0.1 }}
               material={{ color: "green" }}
-              position={cat.position }
+              position={{ x: cat.position.x, y: cat.position.y + 0.2, z: cat.position.z }}
               events={{
                 click: () => handleChangeImage(cat.id, 'path/to/new/image.jpg')
               }}
