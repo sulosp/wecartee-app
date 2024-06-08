@@ -9,25 +9,26 @@ export const STORE_DATA = [
         id: 1,
         name: 'all',
         img: "/assets/store/Nike/storeView.png",
-        connectedViews: [2, 3],
+        position:" y: 2, z: -3"   
+        
       },
       {
         id: 2,
         women: 'women',
         img: "/assets/store/Nike/storeView.png",
-        connectedViews: [1, 3],
+        position:" y: 2, z: -3"
       },
       {
         id: 3,
         women: 'Men',
         img: "/assets/store/Nike/storeView.png",
-        connectedViews: [1, 3],
+        position:" y: 2, z: -3"
       },
       {
-        id: 3,
+        id: 4,
         kids: 'kids',
         img: "/assets/store/Nike/storeView.png",
-        connectedViews: [1, 2],
+        position:" y: 2, z: -3"
       },
     ]
 
