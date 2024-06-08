@@ -15,7 +15,9 @@ export default function Store() {
         <div
           key={store.id}
           className="flex flex-col w-full h-full relative justify-center items-center flex-wrap"
-          style={{ display: `/socialZone${store.url}` === currentURL ? "flex" : "none" }}
+          style={{
+            display: `/socialZone${store.url}` === currentURL ? "flex" : "none",
+          }}
         >
           <div className="absolute z-1 top-0 w-full inline-flex justify-between items-center">
             <div className="view-options btn-group p-5 rounded-full bg-white">
@@ -28,7 +30,9 @@ export default function Store() {
           </h1>
 
           <div className="absolute z-0 top-0 left-0 w-full h-full">
-            {`/socialZone${store.url}` === currentURL && <VR key={store.id} store={store} />}
+            {`/socialZone${store.url}` === currentURL && (
+              <VR key={store.id} store={store} />
+            )}
           </div>
         </div>
       ))}
