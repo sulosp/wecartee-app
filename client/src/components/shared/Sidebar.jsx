@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logolight from "../../assets/logolight.svg";
 import Favicon from "../../assets/favicon.svg";
-import { DASHBOARD_SIDEBAR_LINKS, DASHBOARD_SIDEBAR_BOTTOM_LINKS, SELLER_SIDEBAR_LINKS, SETTINGS_LINKS } from "../../lib/consts/navigation";
+import { DASHBOARD_SIDEBAR_LINKS, DASHBOARD_SIDEBAR_BOTTOM_LINKS, SELLER_SIDEBAR_LINKS, SETTINGS_LINKS} from "../../lib/consts/navigation";
 import classNames from "classnames";
 import ToggleSwitch from "../controls/toggleSwitch";
 import Notification from "../controls/notification";
@@ -97,7 +97,7 @@ function ViewModeNavigation(){
   const location = useLocation();
   const path = location.pathname;
 
-if (path === "/businessDirectory" ||  path  === "/cart" || path === "/"  || path === "/socialZone" || path === "/savedBusinesses" || path  === "/buyerchat") {
+if (path === "/businessDirectory" ||  path  === "/cart" || path === "/"   || path === "/savedBusinesses" || path  === "/buyerchat" || path.startsWith("/socialZone") ){
   return (
     
     <div className="flex flex-col flex-shrink-0 items-center">
@@ -124,9 +124,7 @@ if (path === "/businessDirectory" ||  path  === "/cart" || path === "/"  || path
         }
     </div>
   )
-}
-  
-  
+} 
   
   else {
   return null;

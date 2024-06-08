@@ -9,30 +9,31 @@ import Settings from "./components/shared/settings";
 import SavedBusinesses from "./components/buyer/savedBusinesses";
 import BuyerChat from "./components/buyer/buyerChat";
 import Overview from "./components/seller/overview";
-import SellerChat from './components/seller/sellerChat'
+import SellerChat from "./components/seller/sellerChat";
 
 
 function App() {
   return (
     <>
       <Routes>
-        
+
         <Route path="/" element={<Layout />}>
+
           <Route index element={<Dashboard />} />
           <Route path="businessDirectory" element={<BusinessDirectory />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="socialZone" element={<SocialZone />} />
+          <Route path="socialZone/*" element={<SocialZone />} />      
+
           <Route path="settings" element={<Settings />} />
           <Route path="savedBusinesses" element={<SavedBusinesses />} />
           <Route path="buyerchat" element={<BuyerChat />} />
 
           {/*sellerview*/}
           <Route path="overview" element={<Overview />} />
-          <Route path = "sellerchat" element ={<SellerChat />} />
+          <Route path="sellerchat" element={<SellerChat />} />
 
+        </Route>
 
-        </Route>      
-     
       </Routes>
     </>
   );

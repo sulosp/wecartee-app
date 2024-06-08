@@ -1,25 +1,66 @@
 export const STORE_DATA = [
   {
-    key: "001",
+    id: 1,
+    name: "Nike",
     tagline: "Welcome to Nike Store",
-    views: [
+    url: "/nike",
+    category: [
       {
-        name: "All",
+        id: 1,
+        name: 'all',
         img: "/assets/store/Nike/storeView.png",
+        position:" x: 0, y: 2, z: -3 "   
+        
       },
       {
-        name: "Men",
-        img: "/assets/store/Nike/Men-1.png"
+        id: 2,
+        women: 'women',
+        img: "/assets/store/Nike/storeView.png",
+        position:" x: 0, y: 2, z: -3"
       },
       {
-        name:"Women",
-        img:["/assets/store/Nike/Women-1.png", "/assets/store/Nike/Women-2.png"]
+        id: 3,
+        women: 'Men',
+        img: "/assets/store/Nike/storeView.png",
+        position:" x: 0, y: 2, z: -3"
       },
       {
-        name: "Kids",
-        img :"/assets/store/Nike/Kids-1.png"
-      }
-    ],
+        id: 4,
+        kids: 'kids',
+        img: "/assets/store/Nike/storeView.png",
+        position:" x: 0, y: 2, z: -3"
+      },
+    ]
+
   },
+
+  {
+    id: 2,
+    name: "Macdonalds",
+    tagline: "Welcome to Macdonlads",
+    url: "/macdonalds",
+    category: [
+      {
+        id: 1,
+        name: 'all',
+        img: "/assets/store/Nike/storeView.png",
+        position:" x: 0, y: 2, z: -3"
+      },
+      {
+        id: 2,
+        women: 'women',
+        img: "/assets/store/Nike/storeView.png",
+        position:" x: 0, y: 2, z: -3"
+      },
+      {
+        id: 3,
+        kids: 'kids',
+        img: "/assets/store/Nike/storeView.png",
+        position:" x: 0, y: 2, z: -3"
+      },
+    ]
+
+  },
+
 ];
 

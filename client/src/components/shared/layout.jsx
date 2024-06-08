@@ -11,7 +11,7 @@ export default function Layout() {
       </div>
 
       <div className="lg:min-h-lvh w-5/6 overflow-x-hidden bg-surface-100 ">
-        <div className="w-full overscroll-y-contain">
+        <div className="w-full h-full overscroll-y-contain">
           <Outlet />
         </div>
       </div>

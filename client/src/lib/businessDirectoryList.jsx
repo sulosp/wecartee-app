@@ -111,3 +111,10 @@ export const BUSINESS_DIRECTORY_LIST = [
       upcomingPromotion:"/assets/upcomingPromotions/glamourRetreat.png",
     },
   ];
+
+
+  BUSINESS_DIRECTORY_LIST.forEach((business) => {
+    business.info = `/socialZone${business.info}`; 
+});
+
+export default BUSINESS_DIRECTORY_LIST;

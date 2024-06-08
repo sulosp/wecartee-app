@@ -11,3 +11,6 @@ export default function Filter() {
   </button>
   )
 }
+
+
+export function FilterPanel(){}
