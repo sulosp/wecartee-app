@@ -18,7 +18,7 @@ export default function VR({ store }) {
   useEffect(() => {
     // Initialize currentImages with the initial images of the current store
     const initialImages = {};
-    store.category.forEach(cat => {
+    store.category.forEach((cat) => {
       initialImages[cat.id] = cat.img;
     });
     setCurrentImages(initialImages);
@@ -47,11 +47,20 @@ export default function VR({ store }) {
               position={cat.position}
             />
             <Entity
-              geometry={{ primitive: "box", width: 0.2, height: 0.1, depth: 0.1 }}
+              geometry={{
+                primitive: "box",
+                width: 0.2,
+                height: 0.1,
+                depth: 0.1,
+              }}
               material={{ color: "green" }}
-              position={{ x: cat.position.x, y: cat.position.y + 0.2, z: cat.position.z }}
+              position={{
+                x: cat.position.x,
+                y: cat.position.y + 0.2,
+                z: cat.position.z,
+              }}
               events={{
-                click: () => handleChangeImage(cat.id, 'path/to/new/image.jpg')
+                click: () => handleChangeImage(cat.id, cat.img),
               }}
             />
           </React.Fragment>

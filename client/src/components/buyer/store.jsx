@@ -21,6 +21,7 @@ export default function Store() {
         >
           <div className="absolute z-1 top-0 w-full inline-flex justify-between items-center">
             <div className="view-options btn-group p-5 rounded-full bg-white">
+                
               <Link to={`/socialZone${store.url}`}>{store.name}</Link>
             </div>
           </div>
