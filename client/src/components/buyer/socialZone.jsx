@@ -10,7 +10,7 @@ export default function SocialZone() {
       <div className="flex absolute w-2/12 z-1 h-full">
         <SearchBar />
       </div>
-      <div className="flex w-full h-full z-0 ">
+      <div className="flex flex-wrap  w-full h-full z-0 overflow-hidden  ">
 
      <Store />
       </div>
