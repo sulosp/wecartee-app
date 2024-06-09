@@ -1,1 +1,15 @@
-{}
+{
+    "name": "wecartee",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "npm run start:client",
+      "build": "npm run build:client && npm run build:home",
+      "start:client": "cd client && npm start",
+      "build:client": "cd client && npm run build",
+      "build:home": "cd home && npm run build"
+    },
+    "dependencies": {
+     
+    }
+  }
+  
