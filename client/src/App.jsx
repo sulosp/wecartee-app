@@ -12,18 +12,21 @@ import Overview from "./components/seller/overview";
 import SellerChat from "./components/seller/sellerChat";
 
 
-
 function App() {
   return (
     <>
+
+    
       <Routes>
 
-        <Route path="/" element={<Layout />}>         
+          <Route path ="/home" element={<Home />} />
 
-          <Route index  element={<Dashboard />} />
+        <Route path="/" element={<Layout />}>
+          
+          <Route index element={<Dashboard />} />
           <Route path="businessDirectory" element={<BusinessDirectory />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="socialZone/*" element={<SocialZone />} />      
+          <Route path="socialZone/*" element={<SocialZone />} />
 
           <Route path="settings" element={<Settings />} />
           <Route path="savedBusinesses" element={<SavedBusinesses />} />
@@ -31,11 +34,8 @@ function App() {
 
           {/*sellerview*/}
           <Route path="overview" element={<Overview />} />
-          <Route path="sellerchat" element={<SellerChat />} />           
-
-
+          <Route path="sellerchat" element={<SellerChat />} />
         </Route>
-
       </Routes>
     </>
   );
