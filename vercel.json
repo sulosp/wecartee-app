@@ -1,0 +1,22 @@
+{
+    "builds": [
+      {
+        "src": "client/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "client"
+        }
+      },
+      {
+        "src": "home/public/**",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      { "src": "/", "dest": "/home/public/index.html" },
+      { "src": "/app/(.*)", "dest": "/client" }
+    ],
+    "orgId": "team_yIpdys3g9WEQtnfjqfQyVtgX",
+    "projectId": "prj_kxbX6hzs515FZnYwvYNp6Nh0p7OY"
+  }
+  
