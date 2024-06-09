@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saved Businesses | Wecartee </title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <!--Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="./Assets/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48" />
+
+</head>
+
+<body class="h-lvh">
+
+    <main class="flex flex-row">
+        <section class="sideBar bg-slate-900 h-screen w-1/6 overflow-hidden">
+
+            <div class="flex flex-col justify-between w-1/6 h-screen fixed bg-slate-900  ">
+
+                <div class="flex flex-col justify-start align-items-center">
+
+                    <div class="flex flex-col items-center xl:px-50 lg:px-40 md:px-20 py-20">
+
+                        <a class="max-lg:hidden lg:flex" href="dashboard.html">
+                            <img src="./Assets/logo light.svg" alt="logo">
+                        </a>
+
+                        <a class="lg:hidden max-lg:flex" href="dashboard.html">
+                            <img class="w-10 h-10" src="./Assets/favicon.svg" alt="logo">
+                        </a>
+
+                    </div>
+
+                    <div class="flex flex-col flex-shrink-0 items-center">
+                        <a href="dashboard.html"
+                            class=" menu-button  text-primary-100  hover:bg-primary-100 hover:text-primary-900  p-20 w-full flex  flex-row justify-start  items-center gap-3  max-lg:justify-center">
+                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none fill-primary-900"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_364_3559" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="15" height="16">
+                                    <rect y="0.5" width="15" height="15" fill="#001B3F" />
+                                </mask>
+                                <g mask="url(#mask0_364_3559)">
+                                    <path
+                                        d="M8.125 6.125V2.375H13.125V6.125H8.125ZM1.875 8.625V2.375H6.875V8.625H1.875ZM8.125 13.625V7.375H13.125V13.625H8.125ZM1.875 13.625V9.875H6.875V13.625H1.875Z"
+                                        fill="#D7E2FF" />
+                                </g>
+                            </svg>
+                            <span class="text-sm font-normal leading-tight max-lg:hidden lg:flex ">
+                                Dashboard
+                            </span>
+                        </a>
+
+                        <a href="business-directory.html"
+                            class=" menu-button  hover:bg-primary-100 hover:text-primary-900  text-primary-100 p-20   w-full flex  flex-row justify-start items-center gap-3 max-lg:justify-center ">
+                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_364_3564" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="15" height="16">
+                                    <rect y="0.5" width="15" height="15" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_364_3564)">
+                                    <path
+                                        d="M2.5 4.25V3H12.5V4.25H2.5ZM2.5 13V9.25H1.875V8L2.5 4.875H12.5L13.125 8V9.25H12.5V13H11.25V9.25H8.75V13H2.5ZM3.75 11.75H7.5V9.25H3.75V11.75Z"
+                                        fill="#D7E2FF" />
+                                </g>
+                            </svg>
+
+                            <span class="text-sm font-normal leading-tight max-lg:hidden lg:flex">
+                                Business Directory
+                            </span>
+                        </a>
+
+                        <a href="./social-zone.html"
+                            class="menu-button hover:bg-primary-100 hover:text-primary-900  text-primary-100 p-20 w-full flex  flex-row justify-start items-center gap-3  max-lg:justify-center">
+                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_364_3569" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="15" height="16">
+                                    <rect y="0.5" width="15" height="15" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_364_3569)">
+                                    <path
+                                        d="M5.67188 10.6562L7.5 9.54688L9.32812 10.6562L8.84375 8.57812L10.4688 7.17188L8.32812 7L7.5 5.03125L6.67188 7L4.53125 7.17188L6.15625 8.57812L5.67188 10.6562ZM7.5 15.0625L5.40625 13H2.5V10.0938L0.4375 8L2.5 5.90625V3H5.40625L7.5 0.9375L9.59375 3H12.5V5.90625L14.5625 8L12.5 10.0938V13H9.59375L7.5 15.0625Z"
+                                        fill="#D7E2FF" />
+                                </g>
+                            </svg>
+                            <span class="text-sm font-normal leading-tight max-lg:hidden lg:flex">
+                                Social Zone
+                            </span>
+                        </a>
+
+                        <a href="./saved-businesses.html"
+                            class="active menu-button hover:bg-primary-100 hover:text-primary-900  text-primary-100 p-20 w-full flex  flex-row justify-start items-center gap-3 max-lg:justify-center">
+                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_820_3297" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="15" height="16">
+                                    <rect y="0.5" width="15" height="15" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_820_3297)">
+                                    <path
+                                        d="M13.1407 7.40625V12.375C13.1407 12.7188 13.0183 13.013 12.7735 13.2578C12.5287 13.5026 12.2344 13.625 11.8907 13.625H3.14066C2.79691 13.625 2.50264 13.5026 2.25785 13.2578C2.01306 13.013 1.89066 12.7188 1.89066 12.375V7.40625C1.65108 7.1875 1.46619 6.90625 1.33598 6.5625C1.20577 6.21875 1.20316 5.84375 1.32816 5.4375L1.98441 3.3125C2.06775 3.04167 2.21619 2.81771 2.42973 2.64063C2.64327 2.46354 2.89066 2.375 3.17191 2.375H11.8594C12.1407 2.375 12.3855 2.46094 12.5938 2.63281C12.8021 2.80469 12.9532 3.03125 13.0469 3.3125L13.7032 5.4375C13.8282 5.84375 13.8256 6.21354 13.6954 6.54688C13.5651 6.88021 13.3802 7.16667 13.1407 7.40625ZM8.89067 6.75C9.17192 6.75 9.38546 6.65365 9.53129 6.46094C9.67712 6.26823 9.73441 6.05208 9.70316 5.8125L9.35942 3.625H8.14066V5.9375C8.14066 6.15625 8.21358 6.34635 8.35942 6.50781C8.50525 6.66927 8.68233 6.75 8.89067 6.75ZM6.07817 6.75C6.31775 6.75 6.51306 6.66927 6.6641 6.50781C6.81514 6.34635 6.89066 6.15625 6.89066 5.9375V3.625H5.67192L5.32817 5.8125C5.2865 6.0625 5.34119 6.28125 5.49223 6.46875C5.64327 6.65625 5.83858 6.75 6.07817 6.75ZM3.29691 6.75C3.48441 6.75 3.64848 6.68229 3.7891 6.54688C3.92973 6.41146 4.01566 6.23958 4.04691 6.03125L4.39066 3.625H3.17191L2.54691 5.71875C2.48441 5.92708 2.51827 6.15104 2.64848 6.39063C2.77869 6.63021 2.99483 6.75 3.29691 6.75ZM11.7344 6.75C12.0365 6.75 12.2552 6.63021 12.3907 6.39063C12.5261 6.15104 12.5573 5.92708 12.4844 5.71875L11.8282 3.625H10.6407L10.9844 6.03125C11.0157 6.23958 11.1016 6.41146 11.2422 6.54688C11.3829 6.68229 11.5469 6.75 11.7344 6.75Z"
+                                        fill="#D7E2FF" />
+                                </g>
+                            </svg>
+
+                            <span class="text-sm font-normal leading-tight max-lg:hidden lg:flex">
+                                Saved Businesses
+                            </span>
+                        </a>
+                        <a href="./cart.html"
+                            class="menu-button hover:bg-primary-100 hover:text-primary-900  text-primary-100 p-20 w-full flex  flex-row justify-start items-center gap-3 max-lg:justify-center">
+                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_364_3579" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="15" height="16">
+                                    <rect y="0.5" width="15" height="15" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_364_3579)">
+                                    <path
+                                        d="M4.375 14.25C4.03125 14.25 3.73698 14.1276 3.49219 13.8828C3.2474 13.638 3.125 13.3438 3.125 13C3.125 12.6562 3.2474 12.362 3.49219 12.1172C3.73698 11.8724 4.03125 11.75 4.375 11.75C4.71875 11.75 5.01302 11.8724 5.25781 12.1172C5.5026 12.362 5.625 12.6562 5.625 13C5.625 13.3438 5.5026 13.638 5.25781 13.8828C5.01302 14.1276 4.71875 14.25 4.375 14.25ZM10.625 14.25C10.2812 14.25 9.98698 14.1276 9.74219 13.8828C9.4974 13.638 9.375 13.3438 9.375 13C9.375 12.6562 9.4974 12.362 9.74219 12.1172C9.98698 11.8724 10.2812 11.75 10.625 11.75C10.9688 11.75 11.263 11.8724 11.5078 12.1172C11.7526 12.362 11.875 12.6562 11.875 13C11.875 13.3438 11.7526 13.638 11.5078 13.8828C11.263 14.1276 10.9688 14.25 10.625 14.25ZM3.25 3H12.4688C12.7083 3 12.8906 3.10677 13.0156 3.32031C13.1406 3.53385 13.1458 3.75 13.0312 3.96875L10.8125 7.96875C10.6979 8.17708 10.5443 8.33854 10.3516 8.45312C10.1589 8.56771 9.94792 8.625 9.71875 8.625H5.0625L4.375 9.875H11.875V11.125H4.375C3.90625 11.125 3.55208 10.9193 3.3125 10.5078C3.07292 10.0964 3.0625 9.6875 3.28125 9.28125L4.125 7.75L1.875 3H0.625V1.75H2.65625L3.25 3Z"
+                                        fill="#D7E2FF" />
+                                </g>
+                            </svg>
+
+                            <span class="text-sm font-normal leading-tight max-lg:hidden lg:flex">
+                                Cart
+                            </span>
+                        </a>
+                        <a href="./chat.html"
+                            class="menu-button hover:bg-primary-100 hover:text-primary-900  text-primary-100 p-20 w-full flex  flex-row justify-start items-center gap-3 max-lg:justify-center">
+                            <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_364_3584" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="15" height="16">
+                                    <rect width="15" height="15" transform="matrix(-1 0 0 1 15 0.5)" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_364_3584)">
+                                    <path
+                                        d="M11.25 9.25H3.75V8H11.25V9.25ZM11.25 7.375H3.75V6.125H11.25V7.375ZM11.25 5.5H3.75V4.25H11.25V5.5ZM12.5 11.75C12.8438 11.75 13.138 11.6276 13.3828 11.3828C13.6276 11.138 13.75 10.8438 13.75 10.5V3C13.75 2.65625 13.6276 2.36198 13.3828 2.11719C13.138 1.8724 12.8438 1.75 12.5 1.75H2.5C2.15625 1.75 1.86198 1.8724 1.61719 2.11719C1.3724 2.36198 1.25 2.65625 1.25 3V14.25L3.75 11.75H12.5Z"
+                                        fill="#D7E2FF" />
+                                </g>
+                            </svg>
+
+                            <span class="text-sm font-normal leading-tight max-lg:hidden lg:flex">
+                                Chat
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-end">
+                    <button
+                        class="menu-button hover:bg-primary-100 hover:text-primary-900  text-primary-100 p-20 w-full flex  flex-row justify-start items-start gap-3  max-lg:justify-center">
+                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_364_3590" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="15" height="16">
+                                <rect y="0.5" width="15" height="15" fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_364_3590)">
+                                <path
+                                    d="M5.78125 14.25L5.53125 12.25C5.39583 12.1979 5.26823 12.1354 5.14844 12.0625C5.02865 11.9896 4.91146 11.9115 4.79688 11.8281L2.9375 12.6094L1.21875 9.64062L2.82812 8.42188C2.81771 8.34896 2.8125 8.27865 2.8125 8.21094V7.78906C2.8125 7.72135 2.81771 7.65104 2.82812 7.57812L1.21875 6.35938L2.9375 3.39062L4.79688 4.17188C4.91146 4.08854 5.03125 4.01042 5.15625 3.9375C5.28125 3.86458 5.40625 3.80208 5.53125 3.75L5.78125 1.75H9.21875L9.46875 3.75C9.60417 3.80208 9.73177 3.86458 9.85156 3.9375C9.97135 4.01042 10.0885 4.08854 10.2031 4.17188L12.0625 3.39062L13.7812 6.35938L12.1719 7.57812C12.1823 7.65104 12.1875 7.72135 12.1875 7.78906V8.21094C12.1875 8.27865 12.1771 8.34896 12.1562 8.42188L13.7656 9.64062L12.0469 12.6094L10.2031 11.8281C10.0885 11.9115 9.96875 11.9896 9.84375 12.0625C9.71875 12.1354 9.59375 12.1979 9.46875 12.25L9.21875 14.25H5.78125ZM7.53125 10.1875C8.13542 10.1875 8.65104 9.97396 9.07812 9.54688C9.50521 9.11979 9.71875 8.60417 9.71875 8C9.71875 7.39583 9.50521 6.88021 9.07812 6.45312C8.65104 6.02604 8.13542 5.8125 7.53125 5.8125C6.91667 5.8125 6.39844 6.02604 5.97656 6.45312C5.55469 6.88021 5.34375 7.39583 5.34375 8C5.34375 8.60417 5.55469 9.11979 5.97656 9.54688C6.39844 9.97396 6.91667 10.1875 7.53125 10.1875Z"
+                                    fill="#D7E2FF" />
+                            </g>
+                        </svg>
+
+                        <span class="text-sm font-normal leading-tight max-lg:hidden lg:flex">
+                            Settings
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="lg:hidden mb-2 menu-button hover:bg-primary-100 hover:text-primary-900  text-primary-100 p-20 w-full max-lg:flex  flex-row justify-start items-start gap-3  max-lg:justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path d="M3.6 1.7A.75.75 0 1 0 2.4.799a6.978 6.978 0 0 0-1.123 2.247.75.75 0 1 0 1.44.418c.187-.644.489-1.24.883-1.764ZM13.6.799a.75.75 0 1 0-1.2.9 5.48 5.48 0 0 1 .883 1.765.75.75 0 1 0 1.44-.418A6.978 6.978 0 0 0 13.6.799Z" />
+                            <path fill-rule="evenodd" d="M8 1a4 4 0 0 1 4 4v2.379c0 .398.158.779.44 1.06l1.267 1.268a1 1 0 0 1 .293.707V11a1 1 0 0 1-1 1h-2a3 3 0 1 1-6 0H3a1 1 0 0 1-1-1v-.586a1 1 0 0 1 .293-.707L3.56 8.44A1.5 1.5 0 0 0 4 7.38V5a4 4 0 0 1 4-4Zm0 12.5A1.5 1.5 0 0 1 6.5 12h3A1.5 1.5 0 0 1 8 13.5Z" clip-rule="evenodd" />
+                          </svg>
+                        </button>
+                          
+
+                     
+                    <label class="inline-flex items-center justify-start cursor-pointer p-20 w-full max-lg:hidden ">
+                        <input type="checkbox" value="" class="sr-only peer">
+                        <div
+                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                        </div>
+                        <span
+                            class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300 max-lg:hidden lg:flex">Turn Off Notifications</span>
+                    </label>
+
+
+                    <div class="view-mode btn-group inline-flex max-lg:hidden  rounded-full p-[8px]  mx-20 bg-gradient-to-r from-blue-400 to-fuchsia-500 shadow-inner justify-stretch items-center "
+                    role="group">
+                    <a href="dashboard.html" type="button" aria-current="page"
+                        class=" active rounded-full bg-surface-100 text-primary-900   p-[10px] max-lg:p-0  w-1/2 flex  flex-row justify-center items-center gap-2 ">
+                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.5 13C2.5 10.2386 4.73858 8 7.5 8V8C10.2614 8 12.5 10.2386 12.5 13V13.59H2.5V13Z"
+                                fill="#001B3F" />
+                            <circle cx="7.5" cy="4.79688" r="2.34375" fill=" #001B3F " />
+                        </svg>
+
+
+                        <span class="text-sm font-normal leading-tight ">
+                            Buyer
+                        </span>
+                    </a>
+                    <a href="overview.html"
+                        class=" rounded-full text-primary-100     p-[10px] max-lg:p-0 w-1/2 flex  flex-row justify-center items-center gap-2 ">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.5898 13.4064H13V12.5234C13 9.76201 10.7614 7.52344 8 7.52344C5.23858 7.52344 3 9.76201 3 12.5234V13.4064H5.48242V12.2038C5.48242 10.7935 6.62576 9.65013 8.03613 9.65013C9.44651 9.65013 10.5898 10.7935 10.5898 12.2038V13.4064Z"
+                                fill=" white" />
+                            <path
+                                d="M7.65681 2.45586C7.83506 2.30638 8.16293 2.30638 8.34118 2.45586L12.2079 5.69845C12.4504 5.90188 12.244 6.21124 11.8657 6.21124H4.13231C3.75398 6.21124 3.54754 5.90188 3.79013 5.69845L7.65681 2.45586Z"
+                                fill="white" />
+                        </svg>
+
+
+
+                        <span class="text-sm font-normal leading-tight ">
+                            Seller
+                        </span>
+                    </a>
+                </div>
+
+                    <button type="button" class=" inline-flex justify-between p-20 items-center mb-5  " onclick>
+                        <div class="inline-flex justify-start gap-3 items-center">
+                            <img src="./Assets/user img.png">
+                            <span class="text-sm text-primary-100 font-normal leading-tight max-lg:hidden lg:flex">
+                                Mark S.
+                            </span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            class="max-lg:hidden lg:flex w-4 h-4 stroke-white" stroke="currentColor" class="w-6 h-6 stroke-primary-100 ">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+
+
+                    </button>
+
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="widgets flex flex-col gap-10 justify-start items-start lg:min-h-lvh w-5/6 p-24 bg-surface-100">
+            <div class="w-full p-20 bg-white rounded-lg flex flex-col justify-start items-start h-auto gap-5">
+
+                <span class="text-title-md font-semibold text-primary-400 ">
+                    Recently Saved
+                </span>
+
+                <div class="tag-group flex flex-row gap-2.5 flex-wrap">
+                    <a href="#"
+                        class=" tag font-medium text-label-md text-primary-400 py-5 px-12 rounded-full bg-primary-100">All</a>
+                    <a href="#"
+                        class=" tag font-medium text-label-md text-secondary-200 py-5 px-12 rounded-full bg-surface-100 hover:bg-primary-100 hover:text-primary-400 ">Food</a>
+                    <a href="#"
+                        class=" tag font-medium text-label-md text-secondary-200 py-5 px-12 rounded-full bg-surface-100  hover:bg-primary-100 hover:text-primary-400">Beverages</a>
+                    <a href="#"
+                        class=" tag font-medium text-label-md text-secondary-200 py-5 px-12 rounded-full bg-surface-100  hover:bg-primary-100 hover:text-primary-400">Food
+                        &amp; Drinks</a>
+                    <a href="#"
+                        class=" tag font-medium text-label-md text-secondary-200 py-5 px-12 rounded-full bg-surface-100  hover:bg-primary-100 hover:text-primary-400">Wellness</a>
+                    <a href="#"
+                        class=" tag font-medium text-label-md text-secondary-200 py-5 px-12 rounded-full bg-surface-100  hover:bg-primary-100 hover:text-primary-400">Health</a>
+                    <a href="#"
+                        class=" tag font-medium text-label-md text-secondary-200 py-5 px-12 rounded-full bg-surface-100  hover:bg-primary-100 hover:text-primary-400">Beauty</a>
+                    <a href="#"
+                        class=" tag font-medium text-label-md text-secondary-200 py-5 px-12 rounded-full bg-surface-100  hover:bg-primary-100 hover:text-primary-400">Fashion</a>
+
+                </div>
+
+                <div class="flex flex-row gap-5 flex-wrap">
+                    <img src="./Assets/Seller Img 01.svg" alt="Seller Img">
+                    <img src="./Assets/Seller Img 02.svg" alt="Seller Img">
+                    <img src="./Assets/Seller Img 03.svg" alt="Seller Img">
+                    <img src="./Assets/Seller Img 04.svg" alt="Seller Img">
+                    <img src="./Assets/Seller Img 05.svg" alt="Seller Img">
+                    <img src="./Assets/Seller Img 06.svg" alt="Seller Img">
+
+                    <button
+                        class="w-15 h-15 bg-surface-100 rounded-full flex flex-col justify-center items-center border-dashed border-primary-100 border-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 stroke-primary-200">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                        </svg>
+
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="w-full h-full flex flex-col justify-between items-center gap-6 ">
+
+                <!--top navigation-->
+                <div class="inline-flex w-full justify-between items-start ">
+                    <div class="flex flex-col justify-start gap-0">
+                        <span class="text-primary-400 text-headline-sm">Saved Businesses</span>
+                        <span class="text-primary-400 text-body-md gap-1 ">20 Businesses</span>
+                    </div>
+
+                    <!--list view and grid view-->
+
+                    <div class="inline-flex gap-5 items-center ">
+
+                        <div type="btn-group"
+                            class=" filter-panel bg-white shadow-inner h-fit rounded-full inline-flex gap-0">
+                            <button id="listView" class="btn p-12 active" onclick="toggleActiveClass('listView')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4 fill-primary-900">
+                                    <path
+                                        d="M3 4.75a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6.25 3a.75.75 0 0 0 0 1.5h7a.75.75 0 0 0 0-1.5h-7ZM6.25 7.25a.75.75 0 0 0 0 1.5h7a.75.75 0 0 0 0-1.5h-7ZM6.25 11.5a.75.75 0 0 0 0 1.5h7a.75.75 0 0 0 0-1.5h-7ZM4 12.25a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM3 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+                                </svg>
+                            </button>
+                            <button id="gridView" class="p-12 btn" onclick="toggleActiveClass('gridView')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4 fill-primary-900">
+                                    <path fill-rule="evenodd"
+                                        d="M15 11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6ZM7.25 7.5a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0-.5.5V8a.5.5 0 0 0 .5.5h3.75a.5.5 0 0 0 .5-.5v-.5Zm1.5 3a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-.5.5H9.25a.5.5 0 0 1-.5-.5v-.5ZM13.5 8v-.5A.5.5 0 0 0 13 7H9.25a.5.5 0 0 0-.5.5V8a.5.5 0 0 0 .5.5H13a.5.5 0 0 0 .5-.5Zm-6.75 3.5a.5.5 0 0 0 .5-.5v-.5a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0-.5.5v.5a.5.5 0 0 0 .5.5h3.75Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="inline-flex justify-end items-center">
+
+                            <div class=" bg-white rounded-l-lg shadow-inner inline-flex justify-between items-start">
+                                <input type="search" id="default-search"
+                                    class="p-12 text-sm text-primary-900 border bg-transparent border-transparent rounded-lg  focus:ring-transparent focus:border-transparent  focus-visible:border-transparent outline-none  "
+                                    placeholder="Search By Business Name" required />
+                            </div>
+
+                            <!--filter-->
+
+                            <div id="filter">
+
+                                <button id="filterOnBtn" class="p-10 bg-primary-900 rounded-r-lg" onclick="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_1079_2218" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="0" y="0" width="24" height="24">
+                                            <rect width="24" height="24" fill="#D9D9D9" />
+                                        </mask>
+                                        <g mask="url(#mask0_1079_2218)">
+                                            <path
+                                                d="M14.8004 11.975L13.3754 10.55L16.9504 5.99999H8.82539L6.82539 3.99999H19.0004C19.4171 3.99999 19.7171 4.18332 19.9004 4.54999C20.0837 4.91665 20.0504 5.26665 19.8004 5.59999L14.8004 11.975ZM19.7754 22.6L14.0004 16.825V19C14.0004 19.2833 13.9046 19.5208 13.7129 19.7125C13.5212 19.9042 13.2837 20 13.0004 20H11.0004C10.7171 20 10.4796 19.9042 10.2879 19.7125C10.0962 19.5208 10.0004 19.2833 10.0004 19V12.825L1.40039 4.22499L2.80039 2.79999L21.2004 21.2L19.7754 22.6Z"
+                                                fill="white" />
+                                        </g>
+                                    </svg>
+
+                                </button>
+
+                                <button id="filterOffBtn" class="hidden p-10 bg-primary-900 rounded-r-lg" onclick="">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_1074_3684" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="0" y="0" width="24" height="24">
+                                            <rect width="24" height="24" fill="#D9D9D9" />
+                                        </mask>
+                                        <g mask="url(#mask0_1074_3684)">
+                                            <path
+                                                d="M11.0001 20C10.7167 20 10.4792 19.9042 10.2876 19.7125C10.0959 19.5208 10.0001 19.2833 10.0001 19V13L4.20008 5.6C3.95008 5.26667 3.91258 4.91667 4.08758 4.55C4.26258 4.18333 4.56675 4 5.00008 4H19.0001C19.4334 4 19.7376 4.18333 19.9126 4.55C20.0876 4.91667 20.0501 5.26667 19.8001 5.6L14.0001 13V19C14.0001 19.2833 13.9042 19.5208 13.7126 19.7125C13.5209 19.9042 13.2834 20 13.0001 20H11.0001ZM12.0001 12.3L16.9501 6H7.05008L12.0001 12.3Z"
+                                                fill="white" />
+                                        </g>
+                                    </svg>
+
+
+
+
+
+                                </button>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--filter menu-->
+                    <div id="filteroptions"
+                        class="hidden z-3 right-16 top-32 absolute flex-col bg-white rounded-lg p-10  ">
+
+
+                        <div class="p-10 flex flex-col border-b border-primary-100">
+                            <span class="p-5 text-left w-full text-primary-400 font-medium">Categories</span>
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400">All</span>
+                            </div>
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400">Food</span>
+                            </div>
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400">Beverages</span>
+                            </div>
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400">Food & Drinks</span>
+                            </div>
+
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400">Wellness</span>
+                            </div>
+
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400">Health</span>
+                            </div>
+
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400">Beauty</span>
+                            </div>
+
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400">Fashion</span>
+                            </div>
+                        </div>
+
+                        <div class="p-10 flex flex-col border-b border-primary-100">
+                            <span class="p-5 text-left w-full text-primary-400 font-medium">Rating</span>
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400 w-15">★</span>
+                                <span class="text-primary-400">1 star and up</span>
+                            </div>
+
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400 w-15">★★</span>
+                                <span class="text-primary-400">2 star and up</span>
+                            </div>
+
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400 w-15">★★★</span>
+                                <span class="text-primary-400">3 star and up</span>
+                            </div>
+
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400 w-15">★★★★</span>
+                                <span class="text-primary-400">4 star and up</span>
+                            </div>
+
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400 w-15">★★★★★</span>
+                                <span class="text-primary-400">5 star and up</span>
+                            </div>
+
+                        </div>
+
+                        <div class="p-10 flex flex-col ">
+                            <div class="inline-flex gap-3 p-5">
+                                <input type="checkbox" />
+                                <span class="text-primary-400">Special Promotions</span>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Product Grid -->
+                <div id="productGrid" class="flex flex-row gap-5 w-full justify-between flex-wrap items-center ">
+
+
+                    <!--Product card-->
+                    <div class="w-80 rounded-lg overflow-hidden flex flex-col bg-white drop-shadow-sm">
+
+                        <div class="w-full h-24 bg-auto bg-bottom "
+                            style="background-image: url(./Assets/Nike\ cover.png)"></div>
+
+                        <div class="p-20 -mt-40 flex flex-col gap-3">
+
+                            <img class="w-20 shadow-lg rounded-full border-4 border-white"
+                                src="./Assets/Seller Img 06.svg">
+
+                            <div class="inline-flex justify-between items-center mt-3 mb-3">
+                                <div class="flex flex-col ">
+                                    <span class="text-title-lg text-primary-900">Nike Inc.</span>
+                                    <span class="text-yellow-400 text-title-md">★★★★★</span>
+                                </div>
+
+                                <button
+                                    class="inline-flex justify-center items-center gap-1 py-8 px-14 rounded-full bg-primary-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        class="w-4 h-4 fill-primary-400">
+                                        <path
+                                            d="M2 6.342a3.375 3.375 0 0 1 6-2.088 3.375 3.375 0 0 1 5.997 2.26c-.063 2.134-1.618 3.76-2.955 4.784a14.437 14.437 0 0 1-2.676 1.61c-.02.01-.038.017-.05.022l-.014.006-.004.002h-.002a.75.75 0 0 1-.592.001h-.002l-.004-.003-.015-.006a5.528 5.528 0 0 1-.232-.107 14.395 14.395 0 0 1-2.535-1.557C3.564 10.22 1.999 8.558 1.999 6.38L2 6.342Z" />
+                                    </svg>
+
+                                    <span class="text-primary-400 text-title-md ">Save</span>
+                                </button>
+                            </div>
+                            <div class="flex flex-row justify-start items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4 fill-primary-400">
+                                    <path fill-rule="evenodd"
+                                        d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8h-1.5Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                                <span class="text-primary-400 text-title-sm h-10 w-full">Innovating footwear, inspiring
+                                    global
+                                    athletics excellence.</span>
+
+                            </div>
+
+                            <div class="flex flex-row justify-start items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4 fill-primary-400">
+                                    <path fill-rule="evenodd"
+                                        d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+
+                                <span class="text-primary-400 text-title-sm h-10 w-full">25 Products</span>
+
+                            </div>
+                        </div>
+
+                        <button class="inline-flex w-full bg-primary-900 p-14 justify-center items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                class="fill-white w-4 h-4">
+                                <path fill-rule="evenodd"
+                                    d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-white">View Products</span>
+                        </button>
+                    </div>
+
+                    <!--Product card-->
+                    <div class="w-80 rounded-lg overflow-hidden flex flex-col bg-white drop-shadow-sm">
+                        <div class="w-full h-24 bg-auto bg-center "
+                            style="background-image: url(./Assets/Macdonalds.png)"></div>
+                        <div class="p-20 -mt-40 flex flex-col gap-3">
+                            <img class="w-20 shadow-lg rounded-full border-4 border-white"
+                                src="./Assets/Seller Img 01.svg">
+                            <div class="inline-flex justify-between items-center mt-3 mb-3">
+                                <div class="flex flex-col ">
+                                    <span class="text-title-lg text-primary-900">Macdonalds</span>
+                                    <span class="text-yellow-400 text-title-md">★★★★★</span>
+                                </div>
+
+                                <button
+                                    class="inline-flex justify-center items-center gap-1 py-8 px-14 rounded-full bg-primary-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        class="w-4 h-4 fill-primary-400">
+                                        <path
+                                            d="M2 6.342a3.375 3.375 0 0 1 6-2.088 3.375 3.375 0 0 1 5.997 2.26c-.063 2.134-1.618 3.76-2.955 4.784a14.437 14.437 0 0 1-2.676 1.61c-.02.01-.038.017-.05.022l-.014.006-.004.002h-.002a.75.75 0 0 1-.592.001h-.002l-.004-.003-.015-.006a5.528 5.528 0 0 1-.232-.107 14.395 14.395 0 0 1-2.535-1.557C3.564 10.22 1.999 8.558 1.999 6.38L2 6.342Z" />
+                                    </svg>
+
+                                    <span class="text-primary-400 text-title-md ">Save</span>
+                                </button>
+                            </div>
+
+                            <div class="flex flex-row justify-start items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4 fill-primary-400">
+                                    <path fill-rule="evenodd"
+                                        d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8h-1.5Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                                <span class="text-primary-400 text-title-sm h-10 w-full">Golden arches, global fast food
+                                    leader.</span>
+
+                            </div>
+
+                            <div class="flex flex-row justify-start items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4 fill-primary-400">
+                                    <path fill-rule="evenodd"
+                                        d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+
+                                <span class="text-primary-400 text-title-sm h-10 w-full">25 Products</span>
+
+                            </div>
+
+
+                        </div>
+
+                        <button class="inline-flex w-full bg-primary-900 p-14 justify-center items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                class="fill-white w-4 h-4">
+                                <path fill-rule="evenodd"
+                                    d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-white">View Products</span>
+                        </button>
+                    </div>
+
+                    <!--Product card-->
+                    <div class="w-80 rounded-lg overflow-hidden flex flex-col bg-white drop-shadow-sm">
+                        <div class="w-full h-24 bg-auto bg-bottom "
+                            style="background-image: url(./Assets/Heineken.png)"></div>
+                        <div class="p-20 -mt-40 flex flex-col gap-3">
+                            <img class="w-20 shadow-lg rounded-full border-4 border-white"
+                                src="./Assets/Seller Img 02.svg">
+                            <div class="inline-flex justify-between items-center mt-3 mb-3">
+                                <div class="flex flex-col ">
+                                    <span class="text-title-lg text-primary-900">Heineken</span>
+                                    <span class="text-yellow-400 text-title-md">★★★★★</span>
+                                </div>
+
+                                <button
+                                    class="inline-flex justify-center items-center gap-1 py-8 px-14 rounded-full bg-primary-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        class="w-4 h-4 fill-primary-400">
+                                        <path
+                                            d="M2 6.342a3.375 3.375 0 0 1 6-2.088 3.375 3.375 0 0 1 5.997 2.26c-.063 2.134-1.618 3.76-2.955 4.784a14.437 14.437 0 0 1-2.676 1.61c-.02.01-.038.017-.05.022l-.014.006-.004.002h-.002a.75.75 0 0 1-.592.001h-.002l-.004-.003-.015-.006a5.528 5.528 0 0 1-.232-.107 14.395 14.395 0 0 1-2.535-1.557C3.564 10.22 1.999 8.558 1.999 6.38L2 6.342Z" />
+                                    </svg>
+
+                                    <span class="text-primary-400 text-title-md ">Save</span>
+                                </button>
+                            </div>
+                            <div class="flex flex-row justify-start items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4 fill-primary-400">
+                                    <path fill-rule="evenodd"
+                                        d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8h-1.5Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                                <span class="text-primary-400 text-title-sm h-10 w-full">Brewing innovation,
+                                    world-renowned beer craftsmanship.</span>
+
+                            </div>
+
+                            <div class="flex flex-row justify-start items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4 fill-primary-400">
+                                    <path fill-rule="evenodd"
+                                        d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+
+                                <span class="text-primary-400 text-title-sm h-10 w-full">25 Products</span>
+
+                            </div>
+
+                        </div>
+
+                        <button class="inline-flex w-full bg-primary-900 p-14 justify-center items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                class="fill-white w-4 h-4">
+                                <path fill-rule="evenodd"
+                                    d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-white">View Products</span>
+                        </button>
+                    </div>
+
+
+                    <!--Product card-->
+                    <div class="w-80 rounded-lg overflow-hidden flex flex-col bg-white drop-shadow-sm">
+                        <div class="w-full h-24 bg-auto bg-bottom "
+                            style="background-image: url(./Assets/Chipotle.png)"></div>
+                        <div class="p-20 -mt-40 flex flex-col gap-3">
+                            <img class="w-20 shadow-lg rounded-full border-4 border-white"
+                                src="./Assets/Seller Img 03.svg">
+                            <div class="inline-flex justify-between items-center mt-3 mb-3">
+                                <div class="flex flex-col ">
+                                    <span class="text-title-lg text-primary-900">Chipotle</span>
+                                    <span class="text-yellow-400 text-title-md">★★★★★</span>
+                                </div>
+
+                                <button
+                                    class="inline-flex justify-center items-center gap-1 py-8 px-14 rounded-full bg-primary-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        class="w-4 h-4 fill-primary-400">
+                                        <path
+                                            d="M2 6.342a3.375 3.375 0 0 1 6-2.088 3.375 3.375 0 0 1 5.997 2.26c-.063 2.134-1.618 3.76-2.955 4.784a14.437 14.437 0 0 1-2.676 1.61c-.02.01-.038.017-.05.022l-.014.006-.004.002h-.002a.75.75 0 0 1-.592.001h-.002l-.004-.003-.015-.006a5.528 5.528 0 0 1-.232-.107 14.395 14.395 0 0 1-2.535-1.557C3.564 10.22 1.999 8.558 1.999 6.38L2 6.342Z" />
+                                    </svg>
+
+                                    <span class="text-primary-400 text-title-md ">Save</span>
+                                </button>
+                            </div>
+
+                            <div class="flex flex-row justify-start items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4 fill-primary-400">
+                                    <path fill-rule="evenodd"
+                                        d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8h-1.5Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                                <span class="text-primary-400 text-title-sm h-10 w-full">Fresh flavors, Mexican grill
+                                    dining sensation.</span>
+
+                            </div>
+
+                            <div class="flex flex-row justify-start items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4 fill-primary-400">
+                                    <path fill-rule="evenodd"
+                                        d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+
+                                <span class="text-primary-400 text-title-sm h-10 w-full">25 Products</span>
+
+                            </div>
+
+
+                        </div>
+
+                        <button class="inline-flex w-full bg-primary-900 p-14 justify-center items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                class="fill-white w-4 h-4">
+                                <path fill-rule="evenodd"
+                                    d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-white">View Products</span>
+                        </button>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <!--Product List-->
+                <div id="productList"
+                    class="hidden file:w-full justify-between items-center bg-white shadow-sm rounded-lg">
+                    <table class="w-full">
+                        <thead class="border-b border-primary-100">
+                            <tr class="w-full">
+                                <td class="w-1/12 text-center text-body-md text-primary-400 p-14"><input type="checkbox"
+                                        value="" class="checkbox border border-primary-100 bg-primary-100"></td>
+                                <td class="w-4/12 text-body-md text-primary-400 p-14 "><span>Business Name</span></td>
+                                <td class="w-3/12 text-body-md text-primary-400 p-14"><span>Category</span></td>
+                                <td class="w-2/12 text-center text-body-md text-primary-400 p-14"><span>Products</span>
+                                </td>
+                                <td class="w-2/12 text-center text-body-md text-primary-400 p-14"><span>Save</span></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="w-full">
+                                <td class="w-1/12 text-center text-body-md text-primary-400 p-14"><input type="checkbox"
+                                        value="" class="checkbox border border-primary-100 bg-primary-100"></td>
+                                <td class="w-4/12 text-primary-900 p-14 ">
+                                    <button class="w-full inline-flex gap-3 ">
+                                        <img src="./Assets/Seller Img 01.svg" alt="seller profile" width="40"
+                                            height="40">
+                                        <div class="flex flex-col gap-1 w-full">
+                                            <span class="text-body-md text-primary-400 text-left ">Business Name</span>
+                                            <div class="flex flex-row ">
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+
+
+                                            </div>
+                                        </div>
+                                    </button>
+                                </td>
+                                <td class="w-3/12 text-body-md text-primary-400  p-14 ">
+                                    <div class="w-full inline-flex gap-3 ">
+                                        <span
+                                            class=" tag text-label-md text-primary-400 py-5 px-12 rounded-full bg-primary-100">
+                                            Food </span>
+                                        <span
+                                            class=" tag text-label-md text-primary-400 py-5 px-12 rounded-full bg-primary-100">
+                                            Beverages </span>
+                                    </div>
+                                </td>
+                                <td class="w-2/12 text-center text-body-md text-primary-400 p-14">
+                                    <span>25</span>
+                                </td>
+                                <td class="w-2/12 text-body-md text-primary-400 p-14">
+                                    <div class="inline-flex items-center justify-center w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-6 h-6 fill-primary-100 stroke-none">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="w-full">
+                                <td class="w-1/12 text-center text-body-md text-primary-400 p-14"><input type="checkbox"
+                                        value="" class="checkbox border border-primary-100 bg-primary-100"></td>
+                                <td class="w-4/12 text-primary-900 p-14 ">
+                                    <button class="w-full inline-flex gap-3 ">
+                                        <img src="./Assets/Seller Img 02.svg" alt="seller profile" width="40"
+                                            height="40">
+                                        <div class="flex flex-col gap-1 w-full">
+                                            <span class="text-body-md text-primary-400 text-left">Business Name</span>
+                                            <div class="flex flex-row ">
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-transparent stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+
+
+                                            </div>
+                                        </div>
+                                    </button>
+                                </td>
+                                <td class="w-3/12 text-body-md text-primary-400  p-14 ">
+                                    <div class="w-full inline-flex gap-3 ">
+                                        <span
+                                            class=" tag text-label-md text-primary-400 py-5 px-12 rounded-full bg-primary-100">
+                                            Beverages </span>
+                                    </div>
+                                </td>
+                                <td class="w-2/12 text-center text-body-md text-primary-400 p-14">
+                                    <span>30</span>
+                                </td>
+                                <td class="w-2/12 text-body-md text-primary-400 p-14">
+                                    <div class="inline-flex items-center justify-center w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-6 h-6 fill-primary-100 stroke-none">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="w-full">
+                                <td class="w-1/12 text-center text-body-md text-primary-400 p-14"><input type="checkbox"
+                                        value="" class="checkbox border border-primary-100 bg-primary-100"></td>
+                                <td class="w-4/12 text-primary-900 p-14 ">
+                                    <button class="w-full inline-flex gap-3 ">
+                                        <img src="./Assets/Seller Img 03.svg" alt="seller profile" width="40"
+                                            height="40">
+                                        <div class="flex flex-col gap-1 w-full">
+                                            <span class="text-body-md text-primary-400 text-left ">Business Name</span>
+                                            <div class="flex flex-row ">
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+
+
+                                            </div>
+                                        </div>
+                                    </button>
+                                </td>
+                                <td class="w-3/12 text-body-md text-primary-400  p-14 ">
+                                    <div class="w-full inline-flex gap-3 ">
+                                        <span
+                                            class=" tag text-label-md text-primary-400 py-5 px-12 rounded-full bg-primary-100">
+                                            Food </span>
+                                    </div>
+                                </td>
+                                <td class="w-2/12 text-center text-body-md text-primary-400 p-14">
+                                    <span>20</span>
+                                </td>
+                                <td class="w-2/12 text-body-md text-primary-400 p-14">
+                                    <div class="inline-flex items-center justify-center w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-6 h-6 fill-primary-100 stroke-none">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="w-full">
+                                <td class="w-1/12 text-center text-body-md text-primary-400 p-14"><input type="checkbox"
+                                        value="" class="checkbox border border-primary-100 bg-primary-100"></td>
+                                <td class="w-4/12 text-primary-900 p-14 ">
+                                    <button class="w-full inline-flex gap-3 ">
+                                        <img src="./Assets/Seller Img 04.svg" alt="seller profile" width="40"
+                                            height="40">
+                                        <div class="flex flex-col gap-1 w-full">
+                                            <span class="text-body-md text-primary-400 text-left ">Business Name</span>
+                                            <div class="flex flex-row ">
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-transparent stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+
+
+                                            </div>
+                                        </div>
+                                    </button>
+                                </td>
+                                <td class="w-3/12 text-body-md text-primary-400  p-14 ">
+                                    <div class="w-full inline-flex gap-3 ">
+                                        <span
+                                            class=" tag text-label-md text-primary-400 py-5 px-12 rounded-full bg-primary-100">
+                                            Beverages </span>
+                                        <span
+                                            class=" tag text-label-md text-primary-400 py-5 px-12 rounded-full bg-primary-100">
+                                            Baby Products </span>
+
+                                        <span
+                                            class=" tag text-label-md text-primary-400 py-5 px-10 rounded-full bg-primary-100">
+                                            + </span>
+                                    </div>
+                                </td>
+                                <td class="w-2/12 text-center text-body-md text-primary-400 p-14">
+                                    <span>20</span>
+                                </td>
+                                <td class="w-2/12 text-body-md text-primary-400 p-14">
+                                    <div class="inline-flex items-center justify-center w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-6 h-6 fill-primary-100 stroke-none">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="w-full">
+                                <td class="w-1/12 text-center text-body-md text-primary-400 p-14"><input type="checkbox"
+                                        value="" class="checkbox border border-primary-100 bg-primary-100"></td>
+                                <td class="w-4/12 text-primary-900 p-14 ">
+                                    <button class="w-full inline-flex gap-3 ">
+                                        <img src="./Assets/Seller Img 05.svg" alt="seller profile" width="40"
+                                            height="40">
+                                        <div class="flex flex-col gap-1 w-full">
+                                            <span class="text-body-md text-primary-400 text-left ">Business Name</span>
+                                            <div class="flex flex-row ">
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                        fill="currentColor"
+                                                        class="w-4 h-4 fill-yellow-400  stroke-yellow-400 stroke-1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+
+
+                                            </div>
+                                        </div>
+                                    </button>
+                                </td>
+                                <td class="w-3/12 text-body-md text-primary-400  p-14 ">
+                                    <div class="w-full inline-flex gap-3 ">
+                                        <span
+                                            class=" tag text-label-md text-primary-400 py-5 px-12 rounded-full bg-primary-100">
+                                            Financial </span>
+                                    </div>
+                                </td>
+                                <td class="w-2/12 text-center text-body-md text-primary-400 p-14">
+                                    <span>20</span>
+                                </td>
+                                <td class="w-2/12 text-body-md text-primary-400 p-14">
+                                    <div class="inline-flex items-center justify-center w-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-6 h-6 fill-primary-100 stroke-none">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- page navigation-->
+                <div class="w-full flex items-center justify-between lg:pt-0 sm:pt-3 pb-2">
+
+
+                    <nav class="inline-flex -space-x-px rounded-md gap-1 items-center" aria-label="Pagination">
+
+                        <a href=" #" aria-current="page"
+                            class=" rounded-md items-center hover:bg-primary-100 bg-primary-100 p-10 text-title-sm font-semibold text-primary-400 focus-visible:outline-none ">1</a>
+                        <a href=" #"
+                            class=" rounded-md items-center hover:bg-primary-100  active:bg-primary-100 p-10 text-title-sm font-semibold text-primary-400 focus-visible:outline-none ">2</a>
+                        <a href="# "
+                            class=" rounded-md items-center hover:bg-primary-100 active:bg-primary-100 p-10 text-title-sm font-semibold text-primary-400 focus-visible:outline-none">3</a>
+                        <a href="# "
+                            class=" rounded-md items-center hover:bg-primary-100 active:bg-primary-100 p-10 text-title-sm font-semibold text-primary-400 focus-visible:outline-none">4</a>
+                        <a href="#"
+                            class=" rounded-md items-center hover:bg-primary-100 active:bg-primary-100 p-10 text-title-sm font-semibold text-primary-400 focus-visible:outline-none">5</a>
+
+                    </nav>
+
+                    <a href="" class="text-title-sm text-primary-400">See All >></a>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
