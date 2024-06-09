@@ -1,7 +1,0 @@
-{
-    "routes": [
-      { "src": "/app/(.*)", "dest": "/app/$1" },
-      { "src": "/landing-page/(.*)", "dest": "/landing-page/$1" }
-    ]
-  }
-  
