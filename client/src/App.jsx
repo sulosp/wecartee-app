@@ -11,18 +11,11 @@ import BuyerChat from "./components/buyer/buyerChat";
 import Overview from "./components/seller/overview";
 import SellerChat from "./components/seller/sellerChat";
 
-
 function App() {
   return (
     <>
-
-    
       <Routes>
-
-          <Route path ="/home" element={<Home />} />
-
         <Route path="/" element={<Layout />}>
-          
           <Route index element={<Dashboard />} />
           <Route path="businessDirectory" element={<BusinessDirectory />} />
           <Route path="cart" element={<Cart />} />
