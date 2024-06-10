@@ -29,24 +29,32 @@ export default function SocialZone() {
                     <h1>{currentStore.name}</h1>
                     <p>{currentStore.tagline}</p>
                     <Link to={`/socialZone${currentStore.url}`}>Go to store</Link>
+                   
                   </div>
                   :
-                  null}
+                  <div key={STORE_DATA[0].id} className="w-full h-full">
+                    <h1>{STORE_DATA[0].name}</h1>
+                    <p>{STORE_DATA[0].tagline}</p>
+                    <Link to={`/socialZone${STORE_DATA[0].url}`}>Go to store</Link>
+                  </div>}
+
               </div>
             </div>
           }
         />
 
-       {/* Render the Store component if the current URL matches a store URL */}
-       {currentStore && (
+        {/* Render the Store component if the current URL matches a store URL */}
+        {currentStore && (
           <Route
-            key={currentStore.id} 
+            key={currentStore.id}
             path={`${currentStore.url}`}
             element={<Store storeId={storeId} />}
           />
         )}
-</Routes>
-      
+       
+
+      </Routes>
+
     </div>
   );
 }

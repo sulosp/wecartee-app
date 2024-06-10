@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 console.log("STORE_DATA:", STORE_DATA);
 
-export default function Store() {
+export default function Store(store) {
   const location = useLocation();
   const currentURL = location.pathname;
 

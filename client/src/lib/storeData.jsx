@@ -3,7 +3,7 @@ export const STORE_DATA = [
     id: 1,
     name: "Nike",
     tagline: "Welcome to Nike Store",
-    url: '',
+    url: '/demo',
     category: [
       {
         id: 1,

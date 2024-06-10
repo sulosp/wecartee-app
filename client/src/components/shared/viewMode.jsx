@@ -58,7 +58,7 @@ export function ProfileBtn({ item }) {
           className={classNames(
             pathname === "/businessDirectory" ||
               pathname === "/cart" ||
-              pathname === "/socialZone" ||
+              pathname.startsWith("/socialZone") ||
               pathname === "/savedBusinesses" ||
               pathname === "/buyerchat" ||
               pathname === "/"
