@@ -2,14 +2,16 @@ import React from "react";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 import { STORE_DATA } from "../../lib/storeData";
 import Store from "../buyer/store";
-import { SearchBar } from "../controls/search";
+import { SearchBar, SearchStore } from "../controls/search";
 
 export default function SocialZone() {
   const location = useLocation();
   const currentURL = location.pathname;
 
   // Find the store that matches the current URL
-  const currentStore = STORE_DATA.find((store) => `/socialZone${store.url}` === currentURL);
+  const currentStore = STORE_DATA.find(
+    (store) => `/${store.url}` === currentURL
+  );
 
   return (
     <div className="flex flex-row w-full h-full relative flex-wrap">
@@ -27,14 +29,25 @@ export default function SocialZone() {
                   <div key={currentStore.id} className="w-full h-full">
                     <h1>{currentStore.name}</h1>
                     <p>{currentStore.tagline}</p>
-                    <Link to={`/socialZone${currentStore.url}`}>Go to store</Link>
+                    <Link to={`/${currentStore.url}`}>Go to store</Link>
                   </div>
                 ) : (
-                  <div className ="flex flex-col bg-surface-100 w-full justify-center items-center">
-                    <div className="">
-                <h1 className="text-display-xl "> What's your favorite store?</h1>
-                 </div>
-                </div>
+                  <div className="flex flex-col bg-surface-100 w-full justify-center items-center ">
+                    <div className="flex flex-col gap-7 justify-center items-center">
+                      <div className="flex flex-col gap-3 justify-center items-center">
+                        <h1 className="text-display-md text-center ">
+                          {" "}
+                          Search for a
+                        </h1>
+                        <h1 className="text-display-xl text-center font-light">
+                          {" "}
+                          Seach for a
+                        </h1>
+                        <h1 className="text-display-md text-center"> Store</h1>
+                      </div>
+                      <SearchStore />
+                    </div>
+                  </div>
                 )}
               </div>
             </div>

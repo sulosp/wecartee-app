@@ -3,6 +3,7 @@ import { HiOutlineSearch, HiChevronRight, HiChevronLeft } from "react-icons/hi";
 import { BUSINESS_DIRECTORY_LIST } from "../../lib/businessDirectoryList";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
+import { STORE_DATA } from "../../lib/storeData";
 
 export default function Search({ setSearchResults }) {
   const [searchText, setSearchText] = useState("");
@@ -54,12 +55,28 @@ export function SearchBar() {
       <div
         ref={searchbarRef}
         id="searchbar"
-        className={`flex flex-col gap-6 bg-white shadow-sm transition-all   ${isSearchBarVisible ? 'w-full ease-in duration-100 overflow-hidden p-24' : 'w-0 p-0 overflow-hidden ease-out duration-100'}`}
+        className={`flex flex-col gap-6 bg-white shadow-sm transition-all   ${
+          isSearchBarVisible
+            ? "w-full ease-in duration-100 overflow-hidden p-24"
+            : "w-0 p-0 overflow-hidden ease-out duration-100"
+        }`}
       >
         <div className="overscroll-y-contain h-full">
           <Search setSearchResults={setSearchResults} />
-          <div className={classNames('flex', 'flex-col', 'gap-2', 'mt-5', 'transition-opacity', { 'opacity-100 ease-in duration-200': isSearchBarVisible, 'opacity-0 ease-out duration-100': !isSearchBarVisible })}>   
-             {searchResults.length > 0
+          <div
+            className={classNames(
+              "flex",
+              "flex-col",
+              "gap-2",
+              "mt-5",
+              "transition-opacity",
+              {
+                "opacity-100 ease-in duration-200": isSearchBarVisible,
+                "opacity-0 ease-out duration-100": !isSearchBarVisible,
+              }
+            )}
+          >
+            {searchResults.length > 0
               ? searchResults.map((item) => (
                   <Link
                     key={item.key}
@@ -112,3 +129,39 @@ export function SearchBar() {
   );
 }
 
+export function SearchStore() {
+  const [searchInput, setSearchInput] = useState("");
+
+  const handleSearch = () => {
+    const store = STORE_DATA.find(
+      (s) => s.name.toLowerCase() === searchInput.toLowerCase().trim()
+    );
+    if (store) {
+      window.location.href = `socialZone${store.url}`;
+    } else {
+      alert("Store not found");
+    }
+  };
+
+  return (
+    <div className=" bg-primary-100 rounded-lg shadow-inner inline-flex justify-between items-center p-8 w-full">
+      <input
+        type="text"
+        value={searchInput}
+        onChange={(e) => setSearchInput(e.target.value)}
+        className="p-2 w-full text-sm text-primary-900 border bg-transparent border-transparent rounded-lg focus:ring-transparent focus:border-transparent focus-visible:border-transparent outline-none"
+        placeholder="Enter store name"
+        required
+      />
+      <button
+        type="submit"
+        onClick={handleSearch}
+        className="text-primary-900 focus:ring-4 focus:outline-none font-medium rounded-lg p-2 text-title-md"
+      >
+        <span>
+          <HiOutlineSearch />
+        </span>
+      </button>
+    </div>
+  );
+}
