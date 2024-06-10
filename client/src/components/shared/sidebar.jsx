@@ -80,7 +80,8 @@ function SidebarLink({ item }) {
     <Link
       to={item.path}
       className={classNames(
-        pathname === item.path
+        pathname === item.path || pathname.startsWith(item.path + '/')
+
           ? "text-primary-900 bg-primary-100"
           : "text-primary-100",
         LinkClasses
