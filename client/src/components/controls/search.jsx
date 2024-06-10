@@ -22,7 +22,7 @@ export default function Search({ setSearchResults }) {
       <input
         type="search"
         id="default-search"
-        className="p-2 text-sm text-primary-900 border bg-transparent border-transparent rounded-lg focus:ring-transparent focus:border-transparent focus-visible:border-transparent outline-none"
+        className="p-2 w-full text-sm text-primary-900 border bg-transparent border-transparent rounded-lg focus:ring-transparent focus:border-transparent focus-visible:border-transparent outline-none"
         placeholder="Search"
         value={searchText}
         onChange={handleSearch}
@@ -80,7 +80,7 @@ export function SearchBar() {
                   <Link
                     key={item.key}
                     to={item.info}
-                    className="p-10 inline-flex gap-2 items-center hover:bg-secondary-100 bg-surface-100 rounded-lg"
+                    className="p-10 inline-flex gap-2 items-center hover:bg-secondary-100 bg-surface-100 rounded-lg focus:bg-secondary-100"
                   >
                     <img
                       src={item.iconPath}

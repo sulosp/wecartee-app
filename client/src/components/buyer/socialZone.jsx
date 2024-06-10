@@ -10,7 +10,6 @@ export default function SocialZone() {
 
   // Find the store that matches the current URL
   const currentStore = STORE_DATA.find((store) => `/socialZone${store.url}` === currentURL);
-  const storeId = currentStore ? currentStore.id : null;
 
   return (
     <div className="flex flex-row w-full h-full relative flex-wrap">
@@ -24,36 +23,33 @@ export default function SocialZone() {
           element={
             <div className="inline-flex flex-wrap w-full h-full z-0 overflow-hidden">
               <div className="flex w-full h-full">
-                {currentStore ?
+                {currentStore ? (
                   <div key={currentStore.id} className="w-full h-full">
                     <h1>{currentStore.name}</h1>
                     <p>{currentStore.tagline}</p>
                     <Link to={`/socialZone${currentStore.url}`}>Go to store</Link>
-
                   </div>
-                  :
-                  <div key={STORE_DATA[0].id} className="w-full h-full">
-                    <h1>{STORE_DATA[0].name}</h1>
-                    <p>{STORE_DATA[0].tagline}</p>
-                    <Link to={`/socialZone${STORE_DATA[0].url}`}>Go to store</Link>
-                  </div>}
-
+                ) : (
+                  <div className ="flex flex-col bg-surface-100 w-full justify-center items-center">
+                    <div className="">
+                <h1 className="text-display-xl "> What's your favorite store?</h1>
+                 </div>
+                </div>
+                )}
               </div>
             </div>
           }
         />
 
         {/* Render the Store component if the current URL matches a store URL */}
-        {currentStore && (
+        {STORE_DATA.map((store) => (
           <Route
-            key={currentStore.id}
-            path={`${currentStore.url}`}
-            element={<Store storeId={storeId} />}
+            key={store.id}
+            path={store.url}
+            element={<Store storeId={store.id} />}
           />
-        )}
-
+        ))}
       </Routes>
-
     </div>
   );
 }
