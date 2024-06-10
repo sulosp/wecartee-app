@@ -1,8 +1,8 @@
 import React from "react";
-import { SearchBar } from "../controls/search";
-import Store from "../buyer/store";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 import { STORE_DATA } from "../../lib/storeData";
-import { Route, Routes, Link, useLocation } from "react-router-dom";
+import Store from "../buyer/store";
+import { SearchBar } from "../controls/search";
 
 export default function SocialZone() {
   const location = useLocation();
@@ -29,7 +29,7 @@ export default function SocialZone() {
                     <h1>{currentStore.name}</h1>
                     <p>{currentStore.tagline}</p>
                     <Link to={`/socialZone${currentStore.url}`}>Go to store</Link>
-                   
+
                   </div>
                   :
                   <div key={STORE_DATA[0].id} className="w-full h-full">
@@ -51,7 +51,6 @@ export default function SocialZone() {
             element={<Store storeId={storeId} />}
           />
         )}
-       
 
       </Routes>
 
