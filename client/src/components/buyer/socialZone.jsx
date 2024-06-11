@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { STORE_DATA } from "../../lib/storeData";
 import Store from "../buyer/store";
 import { SearchBar, SearchStore } from "../controls/search";
@@ -28,9 +28,7 @@ export default function SocialZone() {
               <div className="flex w-full h-full">
                 {currentStore ? (
                   <div key={currentStore.id} className="w-full h-full">
-                    <h1>{currentStore.name}</h1>
-                    <p>{currentStore.tagline}</p>
-                    <Link to={`/${currentStore.url}`}>Go to store</Link>
+                    <Store storeId={currentStore.id} />
                   </div>
                 ) : (
                   <div
