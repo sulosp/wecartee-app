@@ -156,6 +156,7 @@ export function SearchStore() {
         placeholder="Enter store name"
         required
       />
+
       <button
         type="submit"
         onClick={handleSearch}
