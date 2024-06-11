@@ -3,7 +3,7 @@ import { Link, Route, Routes, useLocation } from "react-router-dom";
 import { STORE_DATA } from "../../lib/storeData";
 import Store from "../buyer/store";
 import { SearchBar, SearchStore } from "../controls/search";
-import TextAnimation from '../controls/textAnimation';
+import TextAnimation from "../controls/textAnimation";
 
 export default function SocialZone() {
   const location = useLocation();
@@ -11,7 +11,7 @@ export default function SocialZone() {
 
   // Find the store that matches the current URL
   const currentStore = STORE_DATA.find(
-    (store) => `/${store.url}` === currentURL
+    (store) => `/${store.url}` === currentURL,
   );
 
   return (
@@ -34,14 +34,17 @@ export default function SocialZone() {
                   </div>
                 ) : (
                   <div className="flex flex-col bg-surface-100 w-full justify-center items-center ">
-                    <div className="flex flex-col gap-7 justify-center items-center">
+                    <div className="flex flex-col gap-7 justify-center items-center w-1/3">
                       <div className="flex flex-col gap-3 justify-center items-center">
-                        <h1 className="text-display-md text-center ">
+                        <h1 className="text-display-md text-center text-primary-900 ">
                           {" "}
                           Search for a
                         </h1>
                         <TextAnimation />
-                        <h1 className="text-display-md text-center"> Store</h1>
+                        <h1 className="text-display-md text-center text-primary-900 ">
+                          {" "}
+                          Store
+                        </h1>
                       </div>
                       <SearchStore />
                     </div>

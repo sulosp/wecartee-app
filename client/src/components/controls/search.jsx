@@ -13,7 +13,7 @@ export default function Search({ setSearchResults }) {
     setSearchText(searchText);
 
     const filteredList = BUSINESS_DIRECTORY_LIST.filter((item) =>
-      item.business.toLowerCase().includes(searchText)
+      item.business.toLowerCase().includes(searchText),
     );
     setSearchResults(filteredList);
   };
@@ -73,7 +73,7 @@ export function SearchBar() {
               {
                 "opacity-100 ease-in duration-200": isSearchBarVisible,
                 "opacity-0 ease-out duration-100": !isSearchBarVisible,
-              }
+              },
             )}
           >
             {searchResults.length > 0
@@ -134,12 +134,19 @@ export function SearchStore() {
 
   const handleSearch = () => {
     const store = STORE_DATA.find(
-      (s) => s.name.toLowerCase() === searchInput.toLowerCase().trim()
+      (s) => s.name.toLowerCase() === searchInput.toLowerCase().trim(),
     );
     if (store) {
       window.location.href = `socialZone${store.url}`;
     } else {
-      alert("Store not found");
+
+      window.alert = '
+      <div className="fixed inset-0 flex items-center justify-center z-50">
+        <div className="bg-white p-4 rounded-md shadow-lg">
+          <p className="text-red-500 font-bold">Store not found</p>
+        </div>
+      </div>
+      ';
     }
   };
 
