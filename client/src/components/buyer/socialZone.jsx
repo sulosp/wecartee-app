@@ -3,6 +3,7 @@ import { Link, Route, Routes, useLocation } from "react-router-dom";
 import { STORE_DATA } from "../../lib/storeData";
 import Store from "../buyer/store";
 import { SearchBar, SearchStore } from "../controls/search";
+import TextAnimation from '../controls/textAnimation';
 
 export default function SocialZone() {
   const location = useLocation();
@@ -39,10 +40,7 @@ export default function SocialZone() {
                           {" "}
                           Search for a
                         </h1>
-                        <h1 className="text-display-xl text-center font-light">
-                          {" "}
-                          Seach for a
-                        </h1>
+                        <TextAnimation />
                         <h1 className="text-display-md text-center"> Store</h1>
                       </div>
                       <SearchStore />

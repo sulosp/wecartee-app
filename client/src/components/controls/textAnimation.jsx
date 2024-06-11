@@ -1,21 +1,23 @@
+import React from "react";
+import {useEffect} from 'react-router-dom';    
 
-import React from 'react'
-
-export default function TextAnimation()  {
-
+export default function TextAnimation() {
+    
     const text = [favorite, best - selling, amazing, food];
 
-    const t = text.Array.value
+    const t = text[Math.floor(Math.random() * text.length)];
 
-return (
-<div></div>
-    //take t one at a time and do a text animation. for each 2s the t will change
+    const [currentText, setCurrentText] = React.useState(0);
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentText((prev) => (prev + 1) % text.length);
+        }, 2000);
+        return () => clearInterval(interval);
+    }, [t]);
 
-)
-
+    return (
+        <div>
+            <h1 className="animate-text">{text[currentText]}</h1>
+        </div>
+    );
 }
-
-
-
-
-
