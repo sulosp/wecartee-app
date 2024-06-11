@@ -19,7 +19,7 @@ export default function Search({ setSearchResults }) {
   };
 
   return (
-    <div className=" bg-primary-100 rounded-lg shadow-inner inline-flex justify-between items-center p-8 w-full">
+    <div className="bg-primary-100 rounded-lg shadow-inner inline-flex justify-between items-center p-8 w-full">
       <input
         type="search"
         id="default-search"
@@ -33,9 +33,7 @@ export default function Search({ setSearchResults }) {
         type="submit"
         className="text-primary-900 focus:ring-4 focus:outline-none font-medium rounded-lg p-2 text-title-md"
       >
-        <span>
-          <HiOutlineSearch />
-        </span>
+        <HiOutlineSearch />
       </button>
     </div>
   );
@@ -55,7 +53,7 @@ export function SearchBar() {
       <div
         ref={searchbarRef}
         id="searchbar"
-        className={`flex flex-col gap-6 bg-white shadow-sm transition-all   ${
+        className={`flex flex-col gap-6 bg-white shadow-sm transition-all ${
           isSearchBarVisible
             ? "w-full ease-in duration-100 overflow-hidden p-24"
             : "w-0 p-0 overflow-hidden ease-out duration-100"
@@ -131,6 +129,7 @@ export function SearchBar() {
 
 export function SearchStore() {
   const [searchInput, setSearchInput] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleSearch = () => {
     const store = STORE_DATA.find(
@@ -139,19 +138,16 @@ export function SearchStore() {
     if (store) {
       window.location.href = `socialZone${store.url}`;
     } else {
-
-      window.alert = '
-      <div className="fixed inset-0 flex items-center justify-center z-50">
-        <div className="bg-white p-4 rounded-md shadow-lg">
-          <p className="text-red-500 font-bold">Store not found</p>
-        </div>
-      </div>
-      ';
+      setShowPopup(true);
     }
   };
 
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
-    <div className=" bg-primary-100 rounded-lg shadow-inner inline-flex justify-between items-center p-8 w-full">
+    <div className="bg-white rounded-lg shadow-inner inline-flex justify-between items-center p-8 w-full">
       <input
         type="text"
         value={searchInput}
@@ -165,10 +161,29 @@ export function SearchStore() {
         onClick={handleSearch}
         className="text-primary-900 focus:ring-4 focus:outline-none font-medium rounded-lg p-2 text-title-md"
       >
-        <span>
-          <HiOutlineSearch />
-        </span>
+        <HiOutlineSearch />
       </button>
+      {showPopup && (
+        <div className="fixed top-0 right-0 bg-black bg-opacity-50 flex justify-center items-center z-50 w-5/6 h-full">
+          <div className="bg-white p-4 rounded-md shadow-md flex flex-col justify-center items-center gap-7 p-40">
+            <div className="flex flex-col justify-center items-center gap-4">
+              <h2 className="text-center text-display-md text-center tracking-tight text-primary-900">
+                Try searching again!{" "}
+              </h2>
+              <p className="text-body-lg text-primary-900">
+                It seems the store you're looking for is hiding from us.
+              </p>
+            </div>
+
+            <button
+              onClick={handleClosePopup}
+              className="mt-2 px-16 py-8 bg-primary-900 text-white font-bold rounded text-body-lg hover:scale-110 transition ease-in-out delay-150 hover:-translate-y-1 duration-300"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

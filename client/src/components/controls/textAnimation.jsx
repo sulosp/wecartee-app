@@ -25,7 +25,7 @@ export default function TextAnimation() {
 
     return (
         <div>
-            <h1 className="animate-text text-display-lg text-primary-900">
+            <h1 className="animate-text text-display-lg text-primary-900 text-center">
                 {text[currentText]}
             </h1>
         </div>

@@ -33,15 +33,18 @@ export default function SocialZone() {
                     <Link to={`/${currentStore.url}`}>Go to store</Link>
                   </div>
                 ) : (
-                  <div className="flex flex-col bg-surface-100 w-full justify-center items-center ">
-                    <div className="flex flex-col gap-7 justify-center items-center w-1/3">
-                      <div className="flex flex-col gap-3 justify-center items-center">
-                        <h1 className="text-display-md text-center text-primary-900 ">
+                  <div
+                    id="socialZoneDemo"
+                    className="flex flex-col bg-surface-100 w-full justify-center items-center "
+                  >
+                    <div className="flex flex-col gap-7 justify-between items-center w-1/3 h-1/3">
+                      <div className="flex flex-col gap-4 justify-center items-center">
+                        <h1 className="text-display-sm text-center text-primary-900 tracking-tight ">
                           {" "}
                           Search for a
                         </h1>
                         <TextAnimation />
-                        <h1 className="text-display-md text-center text-primary-900 ">
+                        <h1 className="text-display-sm text-center text-primary-900 tracking-tight ">
                           {" "}
                           Store
                         </h1>
