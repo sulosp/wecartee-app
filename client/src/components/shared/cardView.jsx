@@ -12,11 +12,14 @@ export default function CardView({ storeList }) {
   }
 
   return (
-    <div className="inline-flex justify-between items-start gap-5 flex-wrap w-full">
+    <div
+      className="w-full grid xl:grid-cols-4 md:grid-cols-3  sm:grid-cols-2 max-ex-sm:grid-cols-1 xl:gap-10 md:gap-5 sm:gap-7 
+  gap-5"
+    >
       {storeList.map((store) => (
         <div
           key={store.id}
-          className="flex flex-col basis-1/5 bg-white shadow-md rounded-lg overflow-hidden "
+          className="flex flex-col bg-white shadow-md rounded-lg overflow-hidden "
         >
           <img src={store.cover} alt={store.name} className="w-full h-full" />
 

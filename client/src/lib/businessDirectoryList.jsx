@@ -28,8 +28,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     upcomingPromotion: null,
     cover: "/assets/seller_covers/heineken.svg",
   },
-  
- 
+
   {
     key: "003",
     business: "Chipotle",
@@ -92,7 +91,7 @@ export const BUSINESS_DIRECTORY_LIST = [
 
   {
     key: "007",
-    business: "Dreamron",
+    business: "Dreamaron",
     category: ["Haircare", "Beauty"],
     startDate: new Date("2024-03-25"),
     endDate: new Date("2024-05-01"),
@@ -102,7 +101,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     iconPath: "/assets/seller_profiles/dreamaron.svg",
     rating: 4,
     upcomingPromotion: "/assets/upcomingPromotions/haircareProducts.png",
-    cover: "",
+    cover: "/assets/seller_covers/dreamaron.svg",
   },
 
   {
