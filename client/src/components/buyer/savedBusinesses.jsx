@@ -62,14 +62,14 @@ export default function SavedBusinesses() {
                                               />
                                           </div>
                                       </td>
-                                      <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-3 p-3 basis-6/12">
+                                      <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-1 p-3 basis-5/12">
                                           {seller.category.map(
-                                              (category, categoryIndex) => (
+                                              (categoryIndex) => (
                                                   <span
                                                       key={categoryIndex}
                                                       className="text-label-md text-primary-400 py-5 px-12 mx-3 rounded-full bg-primary-100"
                                                   >
-                                                      {category}
+                                                      {seller.category}
                                                   </span>
                                               ),
                                           )}
