@@ -11,7 +11,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     iconPath: "/assets/seller_profiles/macdonalds.svg",
     rating: 4,
     upcomingPromotion: null,
-    cover: "",
+    cover: "assets/seller_covers/macdonalds.svg",
   },
 
   {
@@ -26,9 +26,10 @@ export const BUSINESS_DIRECTORY_LIST = [
     iconPath: "/assets/seller_profiles/Heineken.svg",
     rating: 3,
     upcomingPromotion: null,
-    cover: "",
+    cover: "/assets/seller_covers/heineken.svg",
   },
-
+  
+ 
   {
     key: "003",
     business: "Chipotle",
@@ -56,7 +57,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     iconPath: "/assets/seller_profiles/nestle.svg",
     rating: 3.75,
     upcomingPromotion: "/assets/upcomingPromotions/SuperSale.png",
-    cover: "",
+    cover: "/assets/seller_covers/nestle.svg",
   },
 
   {
@@ -71,7 +72,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     iconPath: "/assets/seller_profiles/feedzai.svg",
     rating: 4,
     upcomingPromotion: null,
-    cover: "",
+    cover: "/assets/seller_covers/feedzai.svg",
   },
 
   {
@@ -86,7 +87,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     iconPath: "/assets/seller_profiles/nike.svg",
     rating: 4,
     upcomingPromotion: null,
-    cover: "",
+    cover: "/assets/seller_covers/nike.svg",
   },
 
   {
@@ -116,7 +117,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     iconPath: "/assets/seller_profiles/loreal.svg",
     rating: 4,
     upcomingPromotion: "/assets/upcomingPromotions/glamourRetreat.png",
-    cover: "",
+    cover: "/assets/seller_covers/loreal.svg",
   },
 ];
 

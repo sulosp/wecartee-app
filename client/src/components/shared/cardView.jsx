@@ -28,13 +28,13 @@ export default function CardView({ storeList }) {
           >
             <img
               src={store.iconPath}
-              alt={store.name}
+              alt={store.business}
               className="w-15 h-15 rounded-full border-2 border-white shadow-lg"
             />
             <div className="inline-flex">
               <div className="flex flex-col justify-center items-start w-full">
                 <span className="text-primary-900 text-left text-title-md tracking-tight">
-                  {store.name}
+                  {store.business}
                 </span>
                 <Rating rating={store.rating} />
               </div>
