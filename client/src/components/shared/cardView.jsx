@@ -17,7 +17,7 @@ export default function CardView({ storeList }) {
 
   return (
     <div
-      className="w-full grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  sm:grid-cols-1 max-ex-sm:grid-cols-1 xl:gap-10 md:gap-5 sm:gap-7 
+      className="w-full grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 max-ex-sm:grid-cols-1 xl:gap-10 md:gap-5 sm:gap-7 
   gap-5"
     >
       {storeList.map((store) => (
@@ -25,7 +25,14 @@ export default function CardView({ storeList }) {
           key={store.id}
           className="flex flex-col bg-white shadow-md rounded-lg overflow-hidden "
         >
-          <img src={store.cover} alt={store.name} className="w-full h-full" />
+          {/*store cover */}
+          <div
+            className="h-[150px] w-full"
+            style={{
+              backgroundImage: `url(${store.cover})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
 
           <div
             className={classNames(
@@ -36,11 +43,13 @@ export default function CardView({ storeList }) {
               },
             )}
           >
+            {/*store profile */}
             <img
               src={store.iconPath}
               alt={store.business}
               className="w-15 h-15 rounded-full border-2 border-white shadow-lg"
             />
+            {/*store data */}
             <div className="inline-flex justify-between w-full items-center gap-2 ">
               <div className="flex flex-col justify-center items-start w-full ">
                 <span className="text-primary-900 text-left text-bold text-title-md tracking-tight">
@@ -64,7 +73,6 @@ export default function CardView({ storeList }) {
                 </button>
               )}
             </div>
-
             <div className="inline-flex justify-start items-center gap-2 text-primary-400">
               <span>
                 <HiOutlineShoppingCart />

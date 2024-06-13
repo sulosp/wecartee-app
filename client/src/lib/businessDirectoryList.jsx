@@ -108,7 +108,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     rating: 4,
     upcomingPromotion: "/assets/upcomingPromotions/haircareProducts.png",
     cover: "/assets/seller_covers/dreamaron.svg",
-    intro: "",
+    intro: "Advanced hair care solutions for healthy, beautiful hair.",
   },
 
   {
@@ -124,7 +124,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     rating: 4,
     upcomingPromotion: "/assets/upcomingPromotions/glamourRetreat.png",
     cover: "/assets/seller_covers/loreal.svg",
-    intro: "",
+    intro: "Global leader in beauty and personal care products.",
   },
 ];
 

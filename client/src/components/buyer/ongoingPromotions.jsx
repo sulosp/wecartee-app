@@ -18,7 +18,7 @@ export default function OngoingPromotions() {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = BUSINESS_DIRECTORY_LIST.slice(
     indexOfFirstItem,
-    indexOfLastItem
+    indexOfLastItem,
   );
 
   const totalPages = Math.ceil(BUSINESS_DIRECTORY_LIST.length / itemsPerPage);
@@ -27,7 +27,6 @@ export default function OngoingPromotions() {
 
   const handleSeeAllClick = () => {
     setShowPagination(false);
-      
   };
 
   const handleDisplayPaginationClick = () => {
@@ -135,9 +134,8 @@ export default function OngoingPromotions() {
           </tbody>
         ) : (
           <tbody>
-            {searchResults.length > 0 ? 
-            
-            searchResults.map((promotion, index) => (
+            {searchResults.length > 0
+              ? searchResults.map((promotion, index) => (
                   <tr key={index} className="w-full flex ">
                     <td className="inline-flex justify-start items-center text-body-md text-primary-400 gap-3 p-3 basis-2/12 ">
                       <img
