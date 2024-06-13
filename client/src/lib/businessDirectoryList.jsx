@@ -12,6 +12,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     rating: 4,
     upcomingPromotion: null,
     cover: "assets/seller_covers/macdonalds.svg",
+    intro: "Golden arches, global fast food leader.",
   },
 
   {
@@ -27,6 +28,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     rating: 3,
     upcomingPromotion: null,
     cover: "/assets/seller_covers/heineken.svg",
+    intro: "Brewing innovation, world-renowned beer craftsmanship.",
   },
 
   {
@@ -42,6 +44,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     rating: 4,
     upcomingPromotion: null,
     cover: "/assets/seller_covers/chipotle.svg",
+    intro: "Fresh flavors, Mexican grill dining sensation.",
   },
 
   {
@@ -57,6 +60,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     rating: 3.75,
     upcomingPromotion: "/assets/upcomingPromotions/SuperSale.png",
     cover: "/assets/seller_covers/nestle.svg",
+    intro: "Nourishing lives, food and beverage leader.",
   },
 
   {
@@ -72,6 +76,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     rating: 4,
     upcomingPromotion: null,
     cover: "/assets/seller_covers/feedzai.svg",
+    intro: "Pioneering AI, trusted in fraud prevention.",
   },
 
   {
@@ -87,6 +92,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     rating: 4,
     upcomingPromotion: null,
     cover: "/assets/seller_covers/nike.svg",
+    intro: "Innovating footwear, inspiring global athletics excellence.",
   },
 
   {
@@ -102,6 +108,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     rating: 4,
     upcomingPromotion: "/assets/upcomingPromotions/haircareProducts.png",
     cover: "/assets/seller_covers/dreamaron.svg",
+    intro: "",
   },
 
   {
@@ -117,6 +124,7 @@ export const BUSINESS_DIRECTORY_LIST = [
     rating: 4,
     upcomingPromotion: "/assets/upcomingPromotions/glamourRetreat.png",
     cover: "/assets/seller_covers/loreal.svg",
+    intro: "",
   },
 ];
 
