@@ -3,17 +3,17 @@
     "client/src/components/buyer/savedBusinesses.jsx": [
       {
         "id": "647a7914-2cbc-4d4d-abaa-c918cc46fcfe",
-        "line": 14,
-        "version": 3330,
-        "index": 509
+        "line": 1,
+        "version": 3699,
+        "index": 0
       }
     ],
     "client/src/components/shared/cardView.jsx": [
       {
         "id": "26d4f765-2c0a-4f6a-8bef-64cbd3080c50",
-        "line": 20,
-        "version": 1898,
-        "index": 519
+        "line": 1,
+        "version": 2562,
+        "index": 0
       }
     ]
   }

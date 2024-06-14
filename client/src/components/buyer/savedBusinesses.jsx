@@ -61,19 +61,29 @@ export default function SavedBusinesses() {
 
                 <div className="w-full h-auto">
                     {showPagination ? (
-                        activeView === "card" ? (
-                            <CardView storeList={currentItems} />
-                        ) : (
-                            <ListView storeList={currentItems} />
-                        )
+                        <>
+                            {activeView === "card" ? (
+                                <CardView storeList={currentItems} />
+                            ) : (
+                                <ListView storeList={currentItems} />
+                            )}
+                        </>
                     ) : searchResults.length > 0 ? (
-                        activeView === "card" ? (
-                            <CardView storeList={searchResults} />
-                        ) : (
-                            <ListView storeList={searchResults} />
-                        )
+                        <>
+                            {activeView === "card" ? (
+                                <CardView storeList={searchResults} />
+                            ) : (
+                                <ListView storeList={searchResults} />
+                            )}
+                        </>
                     ) : (
-                        <p>No search results found.</p>
+                        <>
+                            {activeView === "card" ? (
+                                <CardView storeList={savedItems} />
+                            ) : (
+                                <ListView storeList={savedItems} />
+                            )}
+                        </>
                     )}
                 </div>
 
