@@ -55,12 +55,15 @@ export default function SavedBusinesses() {
                     <div className="xl:basis-1/4 lg:basis-1/3 md:basis-full inline-flex justify-center items-center gap-2 sm:w-full sm:justify-between">
                         <Search setSearchResults={setSearchResults} />
                         <Filter />
-                        <ViewToggle setActiveView={setActiveView} />
+                        <ViewToggle
+                            activeView={activeView}
+                            setActiveView={setActiveView}
+                        />
                     </div>
                 </div>
 
                 <div className="w-full h-auto">
-                    {showPagination ? (
+                    (
                         <>
                             {activeView === "card" ? (
                                 <CardView storeList={currentItems} />

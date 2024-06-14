@@ -9,7 +9,7 @@ export const STORE_DATA = [
         id: 1,
         name: 'all',
         img: "/assets/store/Nike/storeView.png",
-        position:" x: 0, y: 2, z: -3 "   
+        position:" x: 0, y: 2, z: -3 "          
         
       },
       {

@@ -1,6 +1,21 @@
 export const BUSINESS_DIRECTORY_LIST = [
   {
     key: "001",
+    business: "Nike",
+    category: ["Shoes"],
+    startDate: new Date("2024-03-22"),
+    endDate: new Date("2024-04-30"),
+    products: 25,
+    save: true,
+    info: "/nike",
+    iconPath: "/assets/seller_profiles/nike.svg",
+    rating: 4,
+    upcomingPromotion: null,
+    cover: "/assets/seller_covers/nike.svg",
+    intro: "Innovating footwear, inspiring global athletics excellence.",
+  },
+  {
+    key: "002",
     business: "Macdonalds",
     category: ["Food", "Drink"],
     startDate: new Date("2024-01-25"),
@@ -16,7 +31,7 @@ export const BUSINESS_DIRECTORY_LIST = [
   },
 
   {
-    key: "002",
+    key: "003",
     business: "Heineken",
     category: ["Beverages"],
     startDate: new Date("2024-02-20"),
@@ -32,7 +47,7 @@ export const BUSINESS_DIRECTORY_LIST = [
   },
 
   {
-    key: "003",
+    key: "004",
     business: "Chipotle",
     category: ["Food"],
     startDate: new Date("2024-03-10"),
@@ -48,7 +63,7 @@ export const BUSINESS_DIRECTORY_LIST = [
   },
 
   {
-    key: "004",
+    key: "005",
     business: "Nestle",
     category: ["Food", "Drink", "Baby Products"],
     startDate: new Date("2024-03-22"),
@@ -64,7 +79,7 @@ export const BUSINESS_DIRECTORY_LIST = [
   },
 
   {
-    key: "005",
+    key: "006",
     business: "Feedzai",
     category: ["Food", "Drink", "Baby Products"],
     startDate: new Date("2024-03-18"),
@@ -77,22 +92,6 @@ export const BUSINESS_DIRECTORY_LIST = [
     upcomingPromotion: null,
     cover: "/assets/seller_covers/feedzai.svg",
     intro: "Pioneering AI, trusted in fraud prevention.",
-  },
-
-  {
-    key: "006",
-    business: "Nike",
-    category: ["Shoes"],
-    startDate: new Date("2024-03-22"),
-    endDate: new Date("2024-04-30"),
-    products: 25,
-    save: true,
-    info: "/nike",
-    iconPath: "/assets/seller_profiles/nike.svg",
-    rating: 4,
-    upcomingPromotion: null,
-    cover: "/assets/seller_covers/nike.svg",
-    intro: "Innovating footwear, inspiring global athletics excellence.",
   },
 
   {
