@@ -28,12 +28,14 @@ const Store = ({ store }) => {
               {product.product}
             </h2>
 
+              <div className="inline-flex gap-5">
             <p className="text-body-sm text-primary-400">
               {product.attributes.size}
             </p>
             <p className="text-body-sm text-primary-400">
               {product.attributes.color}
             </p>
+            </div>
 
             {/* Add more product details here if needed */}
           </div>
