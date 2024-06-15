@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
 
 export default function ToggleButton({ 
     iconPrimary, 
@@ -8,37 +9,42 @@ export default function ToggleButton({
     onPrimaryClick, 
     onSecondaryClick 
 }) {
-    const [isToggled, setIsToggled] = useState(false);
-    const toggleClass = isToggled ? 'bg-primary-500 text-white' : 'bg-white';
+    const [isToggled, setIsToggled] = useState(true);
+    
 
     const handlePrimaryClick = () => {
-        setIsToggled(false);
+        setIsToggled(true);
         if (onPrimaryClick) onPrimaryClick();
     };
 
     const handleSecondaryClick = () => {
-        setIsToggled(true);
+        setIsToggled(false);
         if (onSecondaryClick) onSecondaryClick();
     };
 
     return (
-        <div className="inline-flex btn-group">
+        <div className="inline-flex btn-group bg-white p-2.5 rounded-full shadow-inner">
+
             <button
                 type="button"
-                className={`inline-flex gap-2 items-center justify-center ${toggleClass} px-4 py-2 rounded-l-md`}
-                onClick={handlePrimaryClick}
-            >
+                className={classNames("inline-flex gap-2 items-center justify-center px-20 py-8 rounded-full w-40", { 'bg-primary-900 text-white shadow-md': isToggled} )}
+                onClick={handlePrimaryClick} >
+                
                 <span>{iconPrimary}</span>
                 <span>{labelPrimary}</span>
+
             </button>
+
             <button
                 type="button"
-                className="inline-flex gap-2 items-center justify-center bg-white px-4 py-2 rounded-r-md"
+                className={classNames("inline-flex gap-2 items-center justify-center px-20 py-8 rounded-full w-40", { 'bg-primary-900 text-white shadow-md': !isToggled} )}
                 onClick={handleSecondaryClick}
             >
                 <span>{iconSecondary}</span>
                 <span>{labelSecondary}</span>
+
             </button>
+
         </div>
     );
 }

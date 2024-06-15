@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Search from "../controls/search";
 import Fitler from "../controls/filter";
 import ToggleButton from "../controls/toggleButton";
+import { HiOutlineHeart, HiOutlineShoppingBag } from "react-icons/hi";
+import ProductCard from "../buyer/productCard";
+import { PRODUCTS_LIST } from "../../lib/productsList";
 
 export default function Cart() {
   const [searchResults, setSearchResults] = useState([]);
@@ -18,13 +21,19 @@ export default function Cart() {
           </div>
 
           <ToggleButton
-            iconPrimary=""
-            iconSecondary=""
-            labelPrimary="Primary"
-            labelSecondary="Secondary"
+            iconPrimary={<HiOutlineHeart />}
+            iconSecondary={<HiOutlineShoppingBag />}
+            labelPrimary="Wishlist"
+            labelSecondary="Cart"
             onPrimaryClick={() => console.log("Primary Clicked")}
             onSecondaryClick={() => console.log("Secondary Clicked")}
           />
+        </div>
+
+        <div className="flex flex-col w-full gap-2 justify-start items-center">
+          {PRODUCTS_LIST.map((store) => (
+            <ProductCard key={store.id} store={store} className="flex flex-col justify-stretch items-start w-full gap-2" />
+          ))}
         </div>
       </div>
     </div>
