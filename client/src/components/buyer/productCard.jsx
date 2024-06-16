@@ -1,47 +1,57 @@
 import React from "react";
+import AddtoCart from "../controls/Add to Cart";
+import Delete from "../controls/delete";
+//import Attribute from "../controls/attribute";
 
 const Store = ({ store }) => {
   return (
-    <div className="w-full">
-      <div className="inline-flex justify-start items-center">
+    <div className="w-full ">
+      <div className="inline-flex justify-start items-center mb-20">
         <h1 className="text-title-lg text-primary-400">{store.store}</h1>
       </div>
       {store.products.map((product) => (
         <div
           key={product.id}
-          className="grid grid-flow-col grid-cols-4 justify-between items-center w-full bg-white shadow-sm p-20 rounded-md mb-4"
+          className="grid lg:grid-cols-5 lg:grid-rows-1 lg:gap-4 md:grid-cols-2 md:grid-rows-2 justify-between items-center w-full bg-white shadow-sm p-20 rounded-md mb-4"
         >
+          {/* image */}
           <img
             src={product.img[0]}
             alt={product.product}
-            className="w-80 h-40 rounded-md "
+            className="w-full lg:h-40 md:h-60 rounded-md lg:row-auto  md:row-span-3"
             style={{
               objectFit: "cover",
               objectPosition: "center",
             }}
           />
-          <div className="w-full">
-            <p className="text-body-lg text-primary-900">
-              {product.collections}
-            </p>
-            <h2 className="text-headline-md font-light text-primary-900">
-              {product.product}
-            </h2>
 
-              <div className="inline-flex gap-5">
-            <p className="text-body-sm text-primary-400">
-              {product.attributes.size}
-            </p>
-            <p className="text-body-sm text-primary-400">
-              {product.attributes.color}
-            </p>
+          <div className="flex flex-col gap-5  lg:col-span-2">
+            <div className="w-full flex flex-col lg:p-0 md:ps-20">
+              <p className="text-body-lg text-primary-900">
+                {product.collections}
+              </p>
+              <h2 className="text-headline-md font-light text-primary-900">
+                {product.product}
+              </h2>
             </div>
-
-            {/* Add more product details here if needed */}
+            <div className="inline-flex gap-5 w-auto">
+              {/* <Attribute /> 
+              {product.map((product) => (
+                <Attribute key={product.id} product={product} />
+              ))}
+                */}
+            </div>
           </div>
-
-          <div>
-            <p>$ {product.price}</p>
+          <div className="inline-flex gap-3 lg:justify-center md:justify-start  items-center lg:p-0 md:p-20">
+            <span className="text-body-md text-primary-900">$</span>
+            <span className="text-headline-md text-primary-900">
+              {product.price}
+            </span>
+          </div>
+          {/* <AddtoCart /> */}
+          <div className="flex lg:flex-col md:inline-flex md:w-full md:flex-nowrap sm:flex-wrap md:justify-between lg:justify-center lg:items-end gap-2 lg:p-0 md:p-20 ">
+            <AddtoCart />
+            <Delete />
           </div>
         </div>
       ))}
