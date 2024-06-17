@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import Search from '../controls/search'
 
-export default function BuyerChat (){
+export default function BuyerChat() {
     return (
-        <div>Buyer Chat</div>
-    )
+        <div>
+            
+        </div>
+    );
 }

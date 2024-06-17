@@ -1,6 +1,6 @@
 import React from 'react'
 import { HiOutlineX } from "react-icons/hi";
-
+import { HiOutlineTrash } from "react-icons/hi";
 
 export default function Delete() {
   return (
@@ -15,5 +15,14 @@ export default function Delete() {
   )
 }
 
+export function DeleteIcon(){
+  return(
+<button className="p-10 rounded-md bg-primary-100 text-primary-900 text-label-lg">
+  <span>
+    <HiOutlineTrash />
+  </span>
+</button>
+    )
+  }
 
 

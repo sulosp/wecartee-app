@@ -1,0 +1,36 @@
+{
+  "files": {
+    "client/src/components/buyer/cart.jsx": [
+      {
+        "id": "529a3109-90ba-4225-9af9-568e0cc7a65f",
+        "line": 1,
+        "version": 397,
+        "index": 0
+      }
+    ],
+    "client/src/components/buyer/savedBusinesses.jsx": [
+      {
+        "id": "647a7914-2cbc-4d4d-abaa-c918cc46fcfe",
+        "line": 1,
+        "version": 3870,
+        "index": 0
+      }
+    ],
+    "client/src/components/shared/cardView.jsx": [
+      {
+        "id": "26d4f765-2c0a-4f6a-8bef-64cbd3080c50",
+        "line": 1,
+        "version": 2562,
+        "index": 0
+      }
+    ],
+    "client/src/lib/productsList.jsx": [
+      {
+        "id": "629e8994-2faf-4c7e-b1fc-a3682b9343e0",
+        "line": 1,
+        "version": 448,
+        "index": 0
+      }
+    ]
+  }
+}

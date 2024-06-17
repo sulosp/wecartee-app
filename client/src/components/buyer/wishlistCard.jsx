@@ -1,9 +1,9 @@
 import React from "react";
-import AddtoCart from "../controls/Add to Cart";
+import AddtoCart from "../controls/addToCart";
 import Delete from "../controls/delete";
 //import Attribute from "../controls/attribute";
 
-const Store = ({ store }) => {
+const WishlistCard = ({ store }) => {
   return (
     <div className="w-full ">
       <div className="inline-flex justify-start items-center mb-20">
@@ -24,7 +24,6 @@ const Store = ({ store }) => {
               objectPosition: "center",
             }}
           />
-
           <div className="flex flex-col gap-5  lg:col-span-2">
             <div className="w-full flex flex-col lg:p-0 md:ps-20">
               <p className="text-body-lg text-primary-900">
@@ -36,8 +35,8 @@ const Store = ({ store }) => {
             </div>
             <div className="inline-flex gap-5 w-auto">
               {/* <Attribute /> 
-              {product.map((product) => (
-                <Attribute key={product.id} product={product} />
+              {product.attributes.map((attribute) => (
+                <Attribute key={attribute.id} attribute={attribute} />
               ))}
                 */}
             </div>
@@ -59,4 +58,4 @@ const Store = ({ store }) => {
   );
 };
 
-export default Store;
+export default WishlistCard;
