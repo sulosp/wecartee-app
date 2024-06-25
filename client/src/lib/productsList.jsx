@@ -17,7 +17,8 @@ export const PRODUCTS_LIST = [
           '/assets/Products/Nike-Vaporfly-3-1.png',
           '/assets/Products/Nike-Vaporfly-3-2.png',
           '/assets/Products/Nike-Vaporfly-3-3.png'
-        ]
+        ],
+        cart:true
       },
       {
         id: 2,
