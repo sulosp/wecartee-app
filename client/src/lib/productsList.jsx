@@ -34,7 +34,8 @@ export const PRODUCTS_LIST = [
           '/assets/Products/dunk-low-womens-shoes-2.webp',
           '/assets/Products/dunk-low-womens-shoes-3.webp',
           '/assets/Products/dunk-low-womens-shoes-4.webp'
-        ]
+        ],
+        cart:false
       },
       {
         id: 3,
