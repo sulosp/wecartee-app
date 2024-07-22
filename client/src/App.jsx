@@ -9,6 +9,7 @@ import Settings from "./components/shared/settings";
 import SavedBusinesses from "./components/buyer/savedBusinesses";
 import BuyerChat from "./components/buyer/buyerChat";
 import Overview from "./components/seller/overview";
+import Wishlist from "./components/buyer/wishlist";
 import SellerChat from "./components/seller/sellerChat";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="businessDirectory" element={<BusinessDirectory />} />
           <Route path="cart" element={<Cart />} />
+          <Route path ="wishlist" element={<Wishlist />} />
           <Route path="socialZone/*" element={<SocialZone />} />
 
           <Route path="settings" element={<Settings />} />
